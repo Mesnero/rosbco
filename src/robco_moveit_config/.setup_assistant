@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: robco_description
+    relative_path: urdf/robco.xacro
+  srdf:
+    relative_path: config/robco.srdf
+  package_settings:
+    author_name: Johannes Mesner
+    author_email: johannes.mesner@tum.de
+    generated_timestamp: 1733627824
+  control_xacro:
+    command:
+      - velocity
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - velocity
+    state:
+      - position
+      - velocity
