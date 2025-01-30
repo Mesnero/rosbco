@@ -12,7 +12,6 @@ find_package(pluginlib REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
 find_package(robcomm REQUIRED)
-find_package(robco_moveit_config REQUIRED)
 
 # Include directories
 include_directories(
@@ -34,7 +33,6 @@ target_link_libraries(
   ${rclcpp_LIBRARIES}
   ${rclcpp_lifecycle_LIBRARIES}
   ${robcomm_LIBRARIES}  # Link robcomm library
-  ${robco_moveit_config_LIBRARIES}
 )
 
 ament_target_dependencies(
@@ -43,7 +41,6 @@ ament_target_dependencies(
   rclcpp
   rclcpp_lifecycle
   robcomm
-  robco_moveit_config
 )
 
 # Prevent pluginlib from using boost

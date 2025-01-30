@@ -7,7 +7,7 @@
     <ros2_control name="${name}" type="system">
       <hardware>
         <xacro:if value="${use_gazebo}">
-          <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+          <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </xacro:if>
         <xacro:unless value="${use_gazebo}">
           <!-- TODO: REPLCAE WITH REAL SYSTEM IN HW INTERFACE -->

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robco">
+  <xacro:property name="description_package" value="$(find robco_description)" />
   <xacro:macro name="handeye"
     params="connected_to:='' ns:='' rpy:='0 0 0' xyz:='0 0 0' safety_distance:=0">
     <xacro:unless value="${not connected_to}">
@@ -13,7 +14,7 @@
     <link name="${ns}_handeye">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/handeye/d415_mount.stl" />
+          <mesh filename="file://${description_package}/meshes/handeye/d415_mount.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
@@ -31,6 +32,7 @@
           <box size="${0.075+safety_distance} ${0.03+safety_distance} ${0.012+safety_distance}" />
         </geometry>
       </collision>
+      <xacro:inertials mesh_filename="handeye/d415_mount.stl"></xacro:inertials>      
     </link>
 
     <joint name="${ns}_handeye_flange_joint" type="fixed">

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0007_I86-300" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0007_I86-300/I86-300_convdec.stl'}">
+      <inertial>
+        <origin xyz="-2.328716579711276e-06 -8.801004587002121e-07 0.15094278992586174" rpy="0 0 0"/>
+        <mass value="4.744727354680872"/>
+        <inertia ixx="1.378726250596794e-05" ixy="4.105490064288379e-10" ixz="-3.089984378512509e-09" iyy="1.3789538173243769e-05" iyz="-1.421439199200823e-09" izz="1.6155459042510645e-06"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0007_I86-300/I86-300.stl'}">
+      <inertial>
+        <origin xyz="-2.5424041534708265e-05 -2.519840737685733e-05 0.1511949894779993" rpy="0 0 0"/>
+        <mass value="0.8869323283235353"/>
+        <inertia ixx="4.075209877993627e-06" ixy="-1.7350186955873435e-10" ixz="1.445088274080245e-11" iyy="4.075445754552031e-06" iyz="5.868628487149483e-11" izz="3.14794865763184e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

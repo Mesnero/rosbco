@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robco">
-  <xacro:arg name="use_gazebo" default="false" />
-  <xacro:arg name="initial_positions_file" default="$(find robco_moveit_config)/config/initial_positions.yaml" />
-
-
+  <xacro:arg name="use_gazebo" default="true" />
+  <xacro:arg name="initial_positions_file" default="$(find robco_description)/config/initial_positions.yaml" />
+  
   <!-- Import Robot macro -->
   <xacro:include filename="$(find robco_description)/urdf/robco_description.xacro" />
 
@@ -16,5 +15,6 @@
   <xacro:if value="$(arg use_gazebo)">
     <!-- Import Gazebo Classic definitions + plugin -->
     <xacro:include filename="$(find robco_description)/gazebo/robco_gazebo.xacro" />
+    <xacro:robco_gazebo/>
   </xacro:if>
 </robot>

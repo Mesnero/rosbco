@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0112_D148-KM" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0112_D148-KM/D148-KM-distal_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.00012522577415139053 1.0879222108650532e-06 -0.010681177131195409" rpy="0 0 0"/>
+        <mass value="1.0167256961848556"/>
+        <inertia ixx="4.450579773727576e-07" ixy="5.462324607277771e-10" ixz="7.490756892890444e-11" iyy="4.4548312471806296e-07" iyz="2.91709345127206e-11" izz="8.526220254049723e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0112_D148-KM/D148-KM-proximal_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.0137900926796536 1.5363417246742984e-05 0.0859325903849407" rpy="0 0 0"/>
+        <mass value="10.392584095858126"/>
+        <inertia ixx="1.40284175252437e-05" ixy="-1.033558468339243e-09" ixz="4.780597776307124e-07" iyy="1.7043951464322202e-05" iyz="3.751362377196862e-11" izz="1.4716779653742851e-05"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0112_D148-KM/D148-KM-proximal.stl'}">
+      <inertial>
+        <origin xyz="-0.015356944441562374 9.973876693046322e-06 0.09188325389078057" rpy="0 0 0"/>
+        <mass value="9.161874327260874"/>
+        <inertia ixx="1.1234973455953078e-05" ixy="5.561870168996512e-10" ixz="2.3571018621076766e-07" iyy="1.4292444623350908e-05" iyz="3.087708524462343e-09" izz="1.2307049905107166e-05"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0112_D148-KM/D148-KM-distal.stl'}">
+      <inertial>
+        <origin xyz="3.8800701993435605e-05 4.1056081607521354e-05 -0.009527478650525296" rpy="0 0 0"/>
+        <mass value="0.5141740424784836"/>
+        <inertia ixx="2.4735789156964807e-07" ixy="2.8007242103430457e-11" ixz="4.438639017967724e-11" iyy="2.470204077021261e-07" iyz="-6.042081801019312e-12" izz="4.81203278528496e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

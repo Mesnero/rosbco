@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0904_E-ECBPMi-fraunhofer" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0904_E-ECBPMi-fraunhofer/E-ECBPMi-fraunhofer.stl'}">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0465000010396985" rpy="0 0 0"/>
+        <mass value="0.7806009017453637"/>
+        <inertia ixx="2.78603560716393e-07" ixy="2.914335439641036e-17" ixz="-2.3684757858670005e-15" iyy="2.78603560716393e-07" iyz="-0.0" izz="1.419908269036559e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0904_E-ECBPMi-fraunhofer/E-ECBPMi-fraunhofer_convdec.stl'}">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0465000010396985" rpy="0 0 0"/>
+        <mass value="0.7806009017453637"/>
+        <inertia ixx="2.78603560716393e-07" ixy="2.914335439641036e-17" ixz="-2.3684757858670005e-15" iyy="2.78603560716393e-07" iyz="-0.0" izz="1.419908269036559e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

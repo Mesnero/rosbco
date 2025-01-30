@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0808_E-simple-vacuum-180deg" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0808_E-simple-vacuum-180deg/0808_E-simple-vacuum-180deg.stl'}">
+      <inertial>
+        <origin xyz="-6.400964522097926e-05 -0.00041608095449896895 0.02756451531321223" rpy="0 0 0"/>
+        <mass value="0.4689370544161173"/>
+        <inertia ixx="1.2557361982560138e-07" ixy="-2.471920799680833e-10" ixz="5.089395865921298e-10" iyy="1.241315434564024e-07" iyz="3.597912505930546e-09" izz="1.1219288707246709e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0808_E-simple-vacuum-180deg/0808_E-simple-vacuum-180deg_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.00015811910660093288 -0.0012925309883343235 0.03526361867220638" rpy="0 0 0"/>
+        <mass value="0.8946936627118326"/>
+        <inertia ixx="2.980136338225716e-07" ixy="-1.1891316724467926e-09" ixz="7.451552240195077e-10" iyy="2.8852768256930023e-07" iyz="1.025692008276557e-08" izz="2.2561648652627625e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

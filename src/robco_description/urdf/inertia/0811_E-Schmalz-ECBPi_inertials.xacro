@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0811_E-Schmalz-ECBPi" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0811_E-Schmalz-ECBPi/0801_E-Schmalz-ECBPMi.stl'}">
+      <inertial>
+        <origin xyz="-1.1262244299439812e-05 -8.755591268211077e-05 0.056280857695734564" rpy="0 0 0"/>
+        <mass value="1.3729004680372185"/>
+        <inertia ixx="7.846648644539621e-07" ixy="-3.8705120573815425e-11" ixz="3.713906606768769e-10" iyy="7.867463637406924e-07" iyz="-1.8227177529737267e-09" izz="3.649685746427453e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0811_E-Schmalz-ECBPi/0801_E-Schmalz-ECBPMi_convdec.stl'}">
+      <inertial>
+        <origin xyz="2.6740951463345385e-05 0.00011741177310799223 0.0572752292233548" rpy="0 0 0"/>
+        <mass value="1.6846164279049785"/>
+        <inertia ixx="9.912198066663803e-07" ixy="-3.298664731394216e-10" ixz="5.635134202992956e-10" iyy="9.89305190335688e-07" iyz="1.7984975096917117e-09" izz="5.024400964852585e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

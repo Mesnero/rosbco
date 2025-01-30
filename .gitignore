@@ -1,5 +1,8 @@
 /build
 /install
 /log
+/.vscode
 /messages.txt
 /test_socket.py
+client.py
+inertia_xacro.py

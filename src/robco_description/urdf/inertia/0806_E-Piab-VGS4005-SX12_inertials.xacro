@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0806_E-Piab-VGS4005-SX12" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0806_E-Piab-VGS4005-SX12/0806_E-Piab-VGS4005-SX12_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.007369929614088481 0.017415671760816064 0.03431240437663621" rpy="0 0 0"/>
+        <mass value="1.507400903229789"/>
+        <inertia ixx="9.434544598173606e-07" ixy="-5.258558152641398e-08" ixz="4.126365465364713e-08" iyy="4.200003993227715e-07" iyz="-5.659540081962461e-08" izz="1.0592462590100824e-06"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0806_E-Piab-VGS4005-SX12/0806_E-Piab-VGS4005-SX12.stl'}">
+      <inertial>
+        <origin xyz="-0.0041279606265818575 0.009139166506053082 0.02966158439316609" rpy="0 0 0"/>
+        <mass value="0.5413994506150671"/>
+        <inertia ixx="2.5732130395049034e-07" ixy="-1.1471012384820208e-08" ixz="1.4601344969966737e-08" iyy="1.3848783432079535e-07" iyz="-3.264607270809594e-08" izz="2.806590060684976e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

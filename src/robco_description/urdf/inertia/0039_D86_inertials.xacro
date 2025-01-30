@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0039_D86" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0039_D86/D86-legacy-proximal_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.01600204195379659 -2.7198269982607417e-05 0.05276124186819998" rpy="0 0 0"/>
+        <mass value="2.567297127899523"/>
+        <inertia ixx="1.1568379646050125e-06" ixy="5.311580220953419e-10" ixz="3.366457669476557e-08" iyy="1.8993490168774928e-06" iyz="-2.4807334657402344e-10" izz="1.6716028715609685e-06"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0039_D86/D86-legacy-distal_convdec.stl'}">
+      <inertial>
+        <origin xyz="9.450118958867731e-06 8.57992236844025e-05 -0.008826005565576712" rpy="0 0 0"/>
+        <mass value="0.28932280094511836"/>
+        <inertia ixx="4.48375079262862e-08" ixy="8.816845748725229e-11" ixz="-2.0246711655224248e-11" iyy="4.4808454683129973e-08" iyz="4.857771336673995e-13" izz="8.16131335541822e-08"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0039_D86/D86-legacy-distal.stl'}">
+      <inertial>
+        <origin xyz="0.03551962433347145 0.06046102701653662 0.05588520250898899" rpy="0 0 0"/>
+        <mass value="0.16758010527054423"/>
+        <inertia ixx="2.8878931440186417e-08" ixy="-3.228672618894215e-11" ixz="4.671649727610514e-12" iyy="2.8909674941159425e-08" iyz="8.426752375896335e-12" izz="5.398311590689301e-08"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0039_D86/D86-legacy-proximal.stl'}">
+      <inertial>
+        <origin xyz="-0.01596883932518047 1.358621254416105e-06 0.05433818057387299" rpy="0 0 0"/>
+        <mass value="2.3216971107264417"/>
+        <inertia ixx="9.592526169864981e-07" ixy="-3.420676773918606e-11" ixz="3.1562238888746e-08" iyy="1.7034372267654266e-06" iyz="7.446386398601168e-11" izz="1.4902303488020116e-06"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

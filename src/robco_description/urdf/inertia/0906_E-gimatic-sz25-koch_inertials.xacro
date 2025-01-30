@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0906_E-gimatic-sz25-koch" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0906_E-gimatic-sz25-koch/E-gimatic-sz25-koch.stl'}">
+      <inertial>
+        <origin xyz="6.483081613298852e-06 -7.54202703850228e-06 0.048979966702842805" rpy="0 0 0"/>
+        <mass value="0.8445483475587989"/>
+        <inertia ixx="4.723912087111607e-07" ixy="1.9318469516666574e-11" ixz="1.823177841253453e-11" iyy="3.3355724537291937e-07" iyz="-1.0112499391653268e-10" izz="2.4621504580558965e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0906_E-gimatic-sz25-koch/E-gimatic-sz25-koch_convdec.stl'}">
+      <inertial>
+        <origin xyz="2.505489029252142e-07 -2.951703033536418e-06 0.053753664643399916" rpy="0 0 0"/>
+        <mass value="1.5578174541225849"/>
+        <inertia ixx="9.063662686723817e-07" ixy="1.9249850233671618e-10" ixz="8.003719659500442e-12" iyy="7.937720959008079e-07" iyz="-1.1705927869358512e-11" izz="4.751470933297673e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

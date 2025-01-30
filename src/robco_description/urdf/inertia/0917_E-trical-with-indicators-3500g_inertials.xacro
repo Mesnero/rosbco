@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0917_E-trical-with-indicators-3500g" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0917_E-trical-with-indicators-3500g/dummy.stl'}">
+      <inertial>
+        <origin xyz="-7.481056710555354e-06 1.488998689642759e-05 1.0572488475509568e-05" rpy="0 0 0"/>
+        <mass value="1.4482829849762502"/>
+        <inertia ixx="5.404600187472346e-07" ixy="-2.368636824525966e-10" ixz="4.4133935233906334e-10" iyy="5.422878945803019e-07" iyz="-2.1123247440416683e-10" izz="5.426447225945179e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

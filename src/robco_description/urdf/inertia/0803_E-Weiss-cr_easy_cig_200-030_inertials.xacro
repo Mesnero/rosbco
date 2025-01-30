@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0803_E-Weiss-cr_easy_cig_200-030" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0803_E-Weiss-cr_easy_cig_200-030/0803_E-Weiss-cr_easy_cig_200-030_convdec.stl'}">
+      <inertial>
+        <origin xyz="-4.4278498420919445e-07 2.5469636578174386e-06 0.059609499826730146" rpy="0 0 0"/>
+        <mass value="1.8492757302241933"/>
+        <inertia ixx="1.1128960366344827e-06" ixy="5.711340059433788e-11" ixz="-1.171436876845774e-11" iyy="1.0581893211243334e-06" iyz="9.417864103100795e-11" izz="6.283312329400032e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0803_E-Weiss-cr_easy_cig_200-030/0803_E-Weiss-cr_easy_cig_200-030.stl'}">
+      <inertial>
+        <origin xyz="-2.3267041418455957e-06 -0.00016738916887154993 0.06009396237412313" rpy="0 0 0"/>
+        <mass value="1.594199446830724"/>
+        <inertia ixx="9.065047340038787e-07" ixy="1.0248803718282152e-09" ixz="-4.15434512338118e-11" iyy="8.378501426905434e-07" iyz="-2.9863639447990995e-09" izz="5.072881110924734e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

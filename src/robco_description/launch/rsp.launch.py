@@ -1,10 +1,13 @@
 from launch import LaunchDescription
-from launch.substitutions import Command, PathJoinSubstitution
+from launch.substitutions import Command, PathJoinSubstitution, LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch_ros.descriptions import ParameterValue
 
 def generate_launch_description():
+    
+    simulation = LaunchConfiguration('simulation')
     # Get URDF via xacro
     robot_description_content = ParameterValue( 
         Command(
@@ -13,16 +16,21 @@ def generate_launch_description():
                 ' use_gazebo:=false'
             ])
         ,value_type=str)
+    
 
-    robot_description = {'robot_description': robot_description_content}
+    arguments = {'robot_description': robot_description_content, 'use_sim_time': simulation}
 
     node_robot_state_publisher = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[robot_description],
-    )
-    
+        parameters=[arguments],
+    )    
 
 
-    return LaunchDescription([node_robot_state_publisher])
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'simulation', 
+            default_value='false', 
+            description='Simulation mode'),
+        node_robot_state_publisher])

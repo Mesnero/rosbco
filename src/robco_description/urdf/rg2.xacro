@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robco">
   <xacro:property name="upper_gripper" value="0.5" />
   <xacro:property name="lower_gripper" value="0.77" />
+  <xacro:property name="description_package" value="$(find robco_description)" />
 
   <xacro:macro name="hand"
     params="connected_to:='' ns:='' rpy:='0 0 0' xyz:='0 0 0' safety_distance:=0">
@@ -12,10 +13,11 @@
         <origin xyz="${xyz}" rpy="${rpy}" />
       </joint>
     </xacro:unless>
+
     <link name="${ns}_hand">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/hand/quick_changer.stl" />
+          <mesh filename="file://${description_package}/meshes/hand/quick_changer.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
@@ -27,6 +29,7 @@
           <cylinder radius="${0.038+safety_distance}" length="0.012" />
         </geometry>
       </collision>
+      <xacro:inertials mesh_filename="hand/quick_changer.stl"></xacro:inertials>
     </link>
 
     <joint name="${ns}_palmjoint" type="fixed">
@@ -38,7 +41,7 @@
     <link name="${ns}_palm">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/hand/rg2_palm.stl" />
+          <mesh filename="file://${description_package}/meshes/hand/rg2_palm.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
@@ -50,6 +53,7 @@
           <box size="${2*0.018+safety_distance} ${0.036*2+safety_distance} ${0.13+safety_distance}" />
         </geometry>
       </collision>
+      <xacro:inertials mesh_filename="hand/rg2_palm.stl"></xacro:inertials>
     </link>
 
     <joint name="${ns}_left_finger_joint" type="revolute">
@@ -77,24 +81,26 @@
     <link name="${ns}_left_finger">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/hand/rg2_leftfinger.stl" />
+          <mesh filename="file://${description_package}/meshes/hand/rg2_leftfinger.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
+      <xacro:inertials mesh_filename="hand/rg2_leftfinger.stl"></xacro:inertials>
     </link>
 
     <!-- MISSING COLLISION -->
     <link name="${ns}_right_finger">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/hand/rg2_rightfinger.stl" />
+          <mesh filename="file://${description_package}/meshes/hand/rg2_rightfinger.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
+      <xacro:inertials mesh_filename="hand/rg2_rightfinger.stl"></xacro:inertials>
     </link>
 
     <joint name="${ns}_left_fingertip_joint" type="revolute">
@@ -125,23 +131,26 @@
     <link name="${ns}_left_fingertip">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/hand/rg2_leftfinger_tip.stl" />
+          <mesh filename="file://${description_package}/meshes/hand/rg2_leftfinger_tip.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
+      <xacro:inertials mesh_filename="hand/rg2_leftfinger_tip.stl"></xacro:inertials>
     </link>
     <!-- MISSING COLLISION -->
     <link name="${ns}_right_fingertip">
       <visual>
         <geometry>
-          <mesh filename="package://robco_description/meshes/hand/rg2_rightfinger_tip.stl" />
+          <mesh filename="file://${description_package}/meshes/hand/rg2_rightfinger_tip.stl" />
         </geometry>
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
+      <xacro:inertials mesh_filename="hand/rg2_rightfinger_tip.stl"></xacro:inertials>
+      
     </link>
 
 

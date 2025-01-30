@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0105_B116" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0105_B116/B116_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.020671217086637692 0.02657098677780081 0.032424215533212904" rpy="0 0 0"/>
+        <mass value="3.9783346089310085"/>
+        <inertia ixx="3.310873542535378e-06" ixy="1.1561218124062363e-06" ixz="-4.987757995885339e-08" iyy="3.528461767659557e-06" iyz="6.324140493241274e-08" izz="5.710957332632097e-06"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0105_B116/B116.stl'}">
+      <inertial>
+        <origin xyz="-0.020520414922630025 0.025087271565882877 0.03647580373500649" rpy="0 0 0"/>
+        <mass value="1.2490562207289573"/>
+        <inertia ixx="1.3000555380261508e-06" ixy="4.479986260778314e-07" ixz="1.6201235028302633e-11" iyy="1.4648540949010875e-06" iyz="1.0298584547526046e-08" izz="2.3427854858251545e-06"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

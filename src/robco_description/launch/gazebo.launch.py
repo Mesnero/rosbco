@@ -1,0 +1,64 @@
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import Command, FindExecutable, PathJoinSubstitution
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+
+
+def generate_launch_description():
+    
+    package_name = "robco_description"
+    
+    robot_state_publisher = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            [FindPackageShare(package_name), "/launch/rsp.launch.py"]
+        ), launch_arguments={"simulation": "true"}.items()
+    )
+    
+    joint_state_publisher = Node(
+        package="joint_state_publisher",
+        executable="joint_state_publisher",
+        name="joint_state_publisher",
+    )
+
+    # gazebo
+    gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            [FindPackageShare("gazebo_ros"), "/launch/gazebo.launch.py"]
+        ),
+        launch_arguments={"verbose": "true", "pause": "true"}.items()
+    )
+
+    gz_spawn_entity = Node(
+        package="gazebo_ros",
+        executable="spawn_entity.py",
+        output="screen",
+        arguments=[
+            "-topic", "/robot_description",
+            "-entity", "robco"
+        ]
+    )
+
+    robot_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_trajectory_controller"],
+    ) 
+    
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster"],
+    )
+
+    nodes = [
+        robot_state_publisher,
+        gazebo,
+        gz_spawn_entity,
+        joint_state_publisher,
+        joint_state_broadcaster_spawner,
+        robot_controller_spawner
+    ]
+
+    return LaunchDescription(nodes)

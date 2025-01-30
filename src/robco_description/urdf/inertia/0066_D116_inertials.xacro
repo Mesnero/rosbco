@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0066_D116" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0066_D116/D116-quebec-distal_convdec.stl'}">
+      <inertial>
+        <origin xyz="-7.180607239481044e-05 -6.100279024076107e-05 -0.013506737597776835" rpy="0 0 0"/>
+        <mass value="0.7608294571121872"/>
+        <inertia ixx="2.1442971185452184e-07" ixy="-1.2030877527078157e-10" ixz="-2.730727608753715e-11" iyy="2.1390247698431455e-07" iyz="4.279849494278626e-11" izz="3.8464705984049043e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0066_D116/D116-quebec-proximal.stl'}">
+      <inertial>
+        <origin xyz="-0.007662508455968061 0.0003176826221491792 0.06747462346221796" rpy="0 0 0"/>
+        <mass value="2.8804113821995596"/>
+        <inertia ixx="2.4463136135245446e-06" ixy="1.7120500281945677e-08" ixz="6.258984990466132e-08" iyy="3.2309511122198666e-06" iyz="-2.0951317473146124e-09" izz="2.7130544465609895e-06"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0066_D116/D116-quebec-distal.stl'}">
+      <inertial>
+        <origin xyz="-8.856987837330227e-06 0.00023742336358802328 -0.009234116106163731" rpy="0 0 0"/>
+        <mass value="0.3167566602726406"/>
+        <inertia ixx="9.857005413973705e-08" ixy="-2.468155378131745e-10" ixz="6.656698117967828e-11" iyy="9.780288594821236e-08" iyz="1.1505071967243284e-10" izz="1.884514487464091e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0066_D116/D116-quebec-proximal_convdec.stl'}">
+      <inertial>
+        <origin xyz="-0.019335459147826896 1.511504032558261e-05 0.06621442973080767" rpy="0 0 0"/>
+        <mass value="5.518632853411958"/>
+        <inertia ixx="4.242040484176442e-06" ixy="2.9852736320662895e-10" ixz="3.899939401275811e-08" iyy="6.710576852159618e-06" iyz="-1.7408921602632096e-09" izz="5.8965983543394656e-06"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

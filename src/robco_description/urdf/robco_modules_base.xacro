@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:property name="description_package" value="robco_description" />
+    <xacro:property name="description_package" value="$(find robco_description)" />
+    <xacro:include filename="$(find robco_description)/urdf/inertials.xacro"/>
 
     <xacro:macro name="robco_base_module" params="name mesh_filename tf_rpy tf_xyz next">
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
                 <material name="Gray">
                     <color rgba="0.9 0.9 0.9 1.0" />
@@ -15,9 +16,10 @@
             </visual>
             <collision>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </collision>
+            <xacro:inertials mesh_filename="${mesh_filename}"/>
         </link>
 
         <xacro:if value="${next != ''}">
@@ -33,7 +35,7 @@
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
                 <material name="Gray">
                     <color rgba="0.9 0.9 0.9 1.0" />
@@ -41,9 +43,10 @@
             </visual>
             <collision>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </collision>
+            <xacro:inertials mesh_filename="${mesh_filename}"/>
         </link>
 
         <xacro:if value="${next != ''}">
@@ -62,7 +65,7 @@
             <visual>
                 <geometry>
                     <mesh
-                        filename="package://${description_package}/meshes/${proximal_mesh_filename}" />
+                        filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
                 </geometry>
                 <material name="Gray">
                     <color rgba="0.9 0.9 0.9 1.0" />
@@ -71,9 +74,10 @@
             <collision>
                 <geometry>
                     <mesh
-                        filename="package://${description_package}/meshes/${proximal_mesh_filename}" />
+                        filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
                 </geometry>
             </collision>
+            <xacro:inertials mesh_filename="${proximal_mesh_filename}"/>
         </link>
 
         <joint name="${name}__${name}_shaft" type="fixed">
@@ -82,7 +86,9 @@
             <child link="${name}_shaft" />
         </joint>
 
-        <link name="${name}_shaft"></link>
+        <link name="${name}_shaft">
+            <xacro:inertials mesh_filename=""/>
+        </link>
 
         <joint name="${name}_joint" type="revolute">
             <origin rpy="${distal_tf_rpy}" xyz="${distal_tf_xyz}" />
@@ -95,7 +101,7 @@
         <link name="${name}_distal">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${distal_mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
                 </geometry>
                 <material name="Gray">
                     <color rgba="0.9 0.9 0.9 1.0" />
@@ -103,9 +109,10 @@
             </visual>
             <collision>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${distal_mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
                 </geometry>
             </collision>
+            <xacro:inertials mesh_filename="${distal_mesh_filename}"/>
         </link>
 
         <xacro:if value="${next != ''}">
@@ -120,7 +127,7 @@
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
                 <material name="Red">
                     <color rgba="1.0 0 0 1.0" />
@@ -128,9 +135,10 @@
             </visual>
             <collision>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </collision>
+            <xacro:inertials mesh_filename="${mesh_filename}"/>
         </link>
     </xacro:macro>
 

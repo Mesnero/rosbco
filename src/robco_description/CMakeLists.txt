@@ -11,7 +11,7 @@ endif()
 
 install(DIRECTORY meshes urdf DESTINATION share/${PROJECT_NAME})
 
-install(DIRECTORY launch worlds ros2_control gazebo
+install(DIRECTORY launch worlds ros2_control gazebo config
   DESTINATION share/${PROJECT_NAME}
 )
 

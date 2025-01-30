@@ -19,8 +19,6 @@
 
   <depend>robcomm</depend>
 
-  <depend>robco_moveit_config</depend>
-
   <exec_depend>robco_description</exec_depend>
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0805_E-simple-vacuum-90deg" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0805_E-simple-vacuum-90deg/0805_E-simple-vacuum-90deg_convdec.stl'}">
+      <inertial>
+        <origin xyz="0.016372057212878655 -0.0021076748422802767 0.02463767682690361" rpy="0 0 0"/>
+        <mass value="0.8004850087226733"/>
+        <inertia ixx="1.5657223600100947e-07" ixy="1.5199253688861754e-08" ixz="-4.732997677793497e-08" iyy="3.025706002692188e-07" iyz="8.971128930987404e-09" izz="3.515283787422835e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0805_E-simple-vacuum-90deg/0805_E-simple-vacuum-90deg.stl'}">
+      <inertial>
+        <origin xyz="0.00883910086747614 -0.0004609436802294246 0.024352784430283447" rpy="0 0 0"/>
+        <mass value="0.5259245176677929"/>
+        <inertia ixx="9.315479346660558e-08" ixy="4.8001251962559855e-09" ixz="-2.4167586144376e-08" iyy="1.5818437447169784e-07" iyz="1.582390627966058e-09" izz="1.9509844786386375e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

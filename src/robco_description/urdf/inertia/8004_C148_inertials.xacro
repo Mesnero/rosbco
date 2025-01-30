@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_8004_C148" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '8004_C148/C148.stl'}">
+      <inertial>
+        <origin xyz="3.59810108747782e-12 1.212540269387812e-10 -4.215243360009312e-08" rpy="0 0 0"/>
+        <mass value="0.3481391779693788"/>
+        <inertia ixx="3.407324248154956e-07" ixy="-1.0105960248157105e-09" ixz="-7.288064615457436e-18" iyy="2.707038913660523e-07" iyz="1.3420449293421914e-16" izz="6.015801524277422e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '8004_C148/C148_convdec.stl'}">
+      <inertial>
+        <origin xyz="1.5605763581257337e-06 3.239272632836581e-07 1.1877493304219665e-07" rpy="0 0 0"/>
+        <mass value="0.998241152123481"/>
+        <inertia ixx="6.223419935113315e-07" ixy="-1.300691460863586e-11" ixz="-1.5675027487026822e-12" iyy="4.939297876672469e-07" iyz="3.5029931273687177e-13" izz="1.0917183650249429e-06"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

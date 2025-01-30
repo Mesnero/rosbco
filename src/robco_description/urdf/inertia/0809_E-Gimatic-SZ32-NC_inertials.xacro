@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0809_E-Gimatic-SZ32-NC" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0809_E-Gimatic-SZ32-NC/0809_E-Gimatic-SZ32-NC.stl'}">
+      <inertial>
+        <origin xyz="-0.00014478396798564506 -0.0007926971013564984 0.06309744271899252" rpy="0 0 0"/>
+        <mass value="1.7579183959105356"/>
+        <inertia ixx="1.0965029093616723e-06" ixy="-5.10209358223876e-09" ixz="-4.2395557258706585e-09" iyy="1.3140865671091266e-06" iyz="-1.2212669474837983e-08" izz="6.565577964200715e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0809_E-Gimatic-SZ32-NC/0809_E-Gimatic-SZ32-NC_convdec.stl'}">
+      <inertial>
+        <origin xyz="0.00011819570117070204 -0.002754156093761367 0.06429145996474743" rpy="0 0 0"/>
+        <mass value="2.557467533697184"/>
+        <inertia ixx="1.6612696928750793e-06" ixy="-2.484387833755127e-08" ixz="-2.8633350804852088e-08" iyy="1.9215621134975654e-06" iyz="-1.5692511726128556e-08" izz="1.1799929357980613e-06"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="inertials_0941_E-Schunk-EMH-RP-045-B" params="mesh_filename">
+    <xacro:if value="${mesh_filename == '0941_E-Schunk-EMH-RP-045-B/0941_E-Schunk-EMH-RP-045-B.stl'}">
+      <inertial>
+        <origin xyz="4.354902498343745e-05 -0.0013262668013976516 0.08380742980354713" rpy="0 0 0"/>
+        <mass value="2.0547877647701016"/>
+        <inertia ixx="2.392890373310387e-06" ixy="-4.188234181853597e-09" ixz="-9.032769262229239e-09" iyy="2.3867301505669393e-06" iyz="-5.093515819691346e-08" izz="5.376700844216389e-07"/>
+      </inertial>
+    </xacro:if>
+
+    <xacro:if value="${mesh_filename == '0941_E-Schunk-EMH-RP-045-B/0941_E-Schunk-EMH-RP-045-B_convdec.stl'}">
+      <inertial>
+        <origin xyz="0.0003547846613585163 -0.0033295343045327214 0.08275894149596814" rpy="0 0 0"/>
+        <mass value="2.7921767222001836"/>
+        <inertia ixx="3.1994176185925508e-06" ixy="-2.5584419660899393e-08" ixz="-5.413352974993992e-08" iyy="3.1453044392561503e-06" iyz="-3.8193842665738635e-08" izz="9.562091136056342e-07"/>
+      </inertial>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

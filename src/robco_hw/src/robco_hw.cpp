@@ -175,6 +175,7 @@ hardware_interface::return_type RobcoHardwareInterface::read(const rclcpp::Time&
     {
         return hardware_interface::return_type::ERROR;
     }
+    robot_.receive();
     auto joint_angles = robot_.getJointAngles();
     for (size_t i = 0; i < joints_.size(); i++)
     {

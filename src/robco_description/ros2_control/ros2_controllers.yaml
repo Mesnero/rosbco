@@ -2,13 +2,14 @@
 controller_manager:
   ros__parameters:
     update_rate: 100  # Hz
+    
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-robco_arm_controller:
+joint_trajectory_controller:
   ros__parameters:
-    type: joint_trajectory_controller/JointTrajectoryController
+    type: velocity_controllers/JointTrajectoryController
     joints:
       - drive1_joint
       - drive2_joint
@@ -16,8 +17,11 @@ robco_arm_controller:
       - drive4_joint
       - drive5_joint
       - drive6_joint
-    command_interfaces:
-      - velocity
-    state_interfaces:
-      - position
-      - velocity
+
+    gains:
+      drive1_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
+      drive2_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
+      drive3_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
+      drive4_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
+      drive5_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
+      drive6_joint: {p: 100, d: 1, i: 1, i_clamp: 1}

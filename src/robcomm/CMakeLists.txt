@@ -12,7 +12,9 @@ find_package(geometry_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 
 # specify include directories
-include_directories(include)
+include_directories(
+  include
+)
 
 # Get source files and header files
 file(GLOB ROBCOMM_SOURCES src/*.cpp)
