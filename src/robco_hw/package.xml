@@ -4,19 +4,15 @@
   <name>robco_hw</name>
   <version>0.0.0</version>
   <description>The robco_hw package</description>
-  <maintainer email="yo@todo.todo">Yo</maintainer>
+  <maintainer email="johannes.mesner@tum.de">Johannes Mesner</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>hardware_interface</depend>
-
   <depend>pluginlib</depend>
-
   <depend>rclcpp</depend>
-
   <depend>rclcpp_lifecycle</depend>
-
   <depend>robcomm</depend>
 
   <exec_depend>robco_description</exec_depend>

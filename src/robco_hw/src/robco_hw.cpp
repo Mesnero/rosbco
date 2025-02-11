@@ -50,10 +50,10 @@ hardware_interface::CallbackReturn RobcoHardwareInterface::on_init(const hardwar
                   joint.name.c_str(), joint.command_interfaces.size());
       return hardware_interface::CallbackReturn::ERROR;
     }
-    if (joint.command_interfaces[0].name != hardware_interface::HW_IF_POSITION)
+    if (joint.command_interfaces[0].name != hardware_interface::HW_IF_VELOCITY)
     {
       RCLCPP_FATAL(rclcpp::get_logger("RobcoHardwareInterface"), "Joint '%s' has command interface '%s'. '%s' expected.",
-                  joint.name.c_str(), joint.command_interfaces[0].name.c_str(), hardware_interface::HW_IF_POSITION);
+                  joint.name.c_str(), joint.command_interfaces[0].name.c_str(), hardware_interface::HW_IF_VELOCITY);
       return hardware_interface::CallbackReturn::ERROR;
     }
     if (joint.state_interfaces.size() != 2)
@@ -76,7 +76,7 @@ hardware_interface::CallbackReturn RobcoHardwareInterface::on_init(const hardwar
     }
     j.pos = std::stod(joint.state_interfaces[0].initial_value);
     j.vel = 0.0;
-    j.pos_cmd = 0.0;
+    j.vel_cmd = 0.0;
     joints_.push_back(j);
   }
   return hardware_interface::CallbackReturn::SUCCESS;
@@ -164,7 +164,7 @@ std::vector<hardware_interface::CommandInterface> RobcoHardwareInterface::export
   for (auto& joint : joints_)
   {
     command_interfaces.emplace_back(
-        hardware_interface::CommandInterface(joint.name, hardware_interface::HW_IF_POSITION, &joint.pos_cmd));
+        hardware_interface::CommandInterface(joint.name, hardware_interface::HW_IF_VELOCITY, &joint.vel_cmd));
   }
   return command_interfaces;
 }
@@ -195,8 +195,8 @@ hardware_interface::return_type RobcoHardwareInterface::write(const rclcpp::Time
     for (auto& joint : joints_)
     {
         // robcomm expects rad/s but exectues command over 10 ms
-        auto dq = (joint.pos - joint.pos_cmd) * 100;
-        dqs.push_back(joint.pos_cmd);
+        auto dq = joint.vel_cmd;
+        dqs.push_back(dq);
     }
     robot_.jog_joints(dqs);
     return hardware_interface::return_type::OK;

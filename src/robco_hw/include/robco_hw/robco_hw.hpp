@@ -37,7 +37,7 @@ class RobcoHardwareInterface : public hardware_interface::SystemInterface
     std::string name;
     double pos;
     double vel;
-    double pos_cmd;
+    double vel_cmd;
   };
 
 public:

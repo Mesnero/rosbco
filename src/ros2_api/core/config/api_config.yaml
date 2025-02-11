@@ -1,0 +1,33 @@
+ros2_api:
+  ros__parameters:
+    states_topic: "/joint_states" # Where to read this topic. Optional. Default: ... (Message is always all five arrays)
+    use_calculated_states: false # Default: false
+    joint_names: #Required if JointTrajectoryController is active
+      - "panda_joint1"
+      - "panda_joint2"
+      - "panda_joint3"
+      - "panda_joint4"
+      - "panda_joint5"
+      - "panda_joint6"
+      - "panda_joint7"
+    base_frame: "world" #Required if JointTrajectoryController is active, defaults to map
+    publishers: # At least one required! 
+      - publisher: "JointTrajectoryController" # One of JointTrajectoryController, JointGroupEffortController, JointGroupPositionController, JointGroupVelocityController, ...
+        name: "joint_trajectory_controller" #Required!
+        #topic: "/..." # Defaults to <name>/joint_trajectory 
+      - publisher: "JointGroupEffortController"
+        name: "effort"
+        #topic: "/..." # Defaults to <name>/commands  
+      - publisher: "JointGroupPositionController"  
+        name: "position" 
+        #topic: "/..." # Defaults to <name>/commands
+      - publisher: "JointGroupVelocityController"
+        name: "velocity"  
+        #topic: "/..." # Defaults to <name>/commands  
+			
+    transport:
+      type: "protocols::UnixDomainSocket" # Name of the plugin as set in the pluginlib.xml
+      params: # Your own params for the plugin specified. Not checked by parser. Passed to the plugin. Optional.
+        socket_path: "/tmp/ros2_api.socket"
+        queue_size: 1
+        max_message_size: 4096

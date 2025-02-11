@@ -1,6 +1,7 @@
 {
     "cmake.sourceDirectory": "/home/jojo/rosbco/src/robco_description",
     "files.associations": {
+        "*.cpp": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
@@ -75,6 +76,22 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
-    }
+        "variant": "cpp",
+        "*.ipp": "cpp",
+        "coroutine": "cpp",
+        "source_location": "cpp",
+        "span": "cpp",
+        "ranges": "cpp",
+        "valarray": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.intelliSenseCacheSize": 0
 }

@@ -19,9 +19,11 @@ joint_trajectory_controller:
       - drive6_joint
 
     gains:
-      drive1_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
-      drive2_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
-      drive3_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
-      drive4_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
-      drive5_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
-      drive6_joint: {p: 100, d: 1, i: 1, i_clamp: 1}
+      drive1_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+      drive2_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+      drive3_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+      drive4_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+      drive5_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+      drive6_joint: {p: 0.025, d: 0, i: 0.005, i_clamp: 100}
+
+      

@@ -10,8 +10,7 @@
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </xacro:if>
         <xacro:unless value="${use_gazebo}">
-          <!-- TODO: REPLCAE WITH REAL SYSTEM IN HW INTERFACE -->
-          <plugin>mock_components/GenericSystem</plugin>
+          <plugin>robco_hw/RobcoHardwareInterface</plugin>
           <param name="robot_ip">192.168.3.1</param>
           <param name="local_rx_port">25001</param>
           <param name="remote_tx_port">25000</param>

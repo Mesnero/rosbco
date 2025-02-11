@@ -15,19 +15,13 @@ def generate_launch_description():
             [FindPackageShare(package_name), "/launch/rsp.launch.py"]
         ), launch_arguments={"simulation": "true"}.items()
     )
-    
-    joint_state_publisher = Node(
-        package="joint_state_publisher",
-        executable="joint_state_publisher",
-        name="joint_state_publisher",
-    )
 
     # gazebo
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [FindPackageShare("gazebo_ros"), "/launch/gazebo.launch.py"]
         ),
-        launch_arguments={"verbose": "true", "pause": "true"}.items()
+        launch_arguments={"verbose": "true"}.items()
     )
 
     gz_spawn_entity = Node(
@@ -44,13 +38,23 @@ def generate_launch_description():
         package="controller_manager",
         executable="spawner",
         arguments=["joint_trajectory_controller"],
+        parameters=[{"use_sim_time": True}]
     ) 
+    
+    joint_state_publisher = Node(
+        package="joint_state_publisher",
+        executable="joint_state_publisher",
+        name="joint_state_publisher",
+        parameters=[{"use_sim_time": True}]
+    )
     
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["joint_state_broadcaster"],
+        parameters=[{"use_sim_time": True}]
     )
+    
 
     nodes = [
         robot_state_publisher,

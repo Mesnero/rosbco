@@ -1,0 +1,5 @@
+<library path="protocols">
+    <class type="protocols::UnixDomainSocket" base_class_type="protocol_base::CommunicationProtocol">
+        <description>This is a UDS plugin.</description>
+    </class>
+</library>
