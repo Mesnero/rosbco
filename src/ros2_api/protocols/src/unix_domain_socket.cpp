@@ -64,7 +64,7 @@ namespace protocols
         }
         RCLCPP_INFO(rclcpp::get_logger("UnixDomainSocket"), "Ready for client to connect.");
 
-        while (true)
+        while (running_)
         {
             client_fd_ = accept(socket_fd_, nullptr, nullptr);
             if (client_fd_ == -1)
@@ -107,7 +107,7 @@ namespace protocols
         {
             if (write(client_fd_, message, length) == -1)
             {
-                int err = errno;  // Capture errno right away
+                int err = errno;  
                 RCLCPP_ERROR(
                     rclcpp::get_logger("UnixDomainSocket"),
                     "Error writing to client: %s (errno: %d)",

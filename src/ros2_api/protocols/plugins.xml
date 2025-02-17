@@ -1,5 +1,8 @@
 <library path="protocols">
-    <class type="protocols::UnixDomainSocket" base_class_type="protocol_base::CommunicationProtocol">
-        <description>This is a UDS plugin.</description>
-    </class>
+  <class type="protocols::UnixDomainSocket" base_class_type="protocol_base::CommunicationProtocol">
+    <description>This is a Unix Domain Socket plugin.</description>
+  </class>
+  <class type="protocols::TCPSocket" base_class_type="protocol_base::CommunicationProtocol">
+    <description>This is a TCP socket plugin.</description>
+  </class>
 </library>
