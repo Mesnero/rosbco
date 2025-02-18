@@ -1,0 +1,3 @@
+[submodule "src/ros2_api"]
+	path = src/ros2_api
+	url = https://github.com/Mesnero/ros2-api.git
