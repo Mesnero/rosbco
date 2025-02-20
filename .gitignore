@@ -6,3 +6,5 @@
 /test_socket.py
 client.py
 inertia_xacro.py
+/.cache
+compile_commands.json
