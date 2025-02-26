@@ -1,9 +1,0 @@
-<library path="robco_hw">
-  <class name="robco_hw/RobcoHardwareInterface"
-         type="robco_hw::RobcoHardwareInterface"
-         base_class_type="hardware_interface::SystemInterface">
-    <description>
-      robco hardware interface with velocity cmd and velocity and position state interface.
-    </description>
-  </class>
-</library>
