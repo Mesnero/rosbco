@@ -3,7 +3,7 @@
          type="robco_hw::RobcoHardwareInterface"
          base_class_type="hardware_interface::SystemInterface">
     <description>
-      ros2_control hardware interface.
+      robco hardware interface with velocity cmd and velocity and position state interface.
     </description>
   </class>
 </library>

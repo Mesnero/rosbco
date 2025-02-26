@@ -12,334 +12,499 @@
     
     <xacro:include filename="$(find robco_description)/urdf/inertia/0031_L86-55_inertials.xacro"/>
     <xacro:inertials_0031_L86-55 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0007_I86-300_inertials.xacro"/>
     <xacro:inertials_0007_I86-300 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0032_L86-383_inertials.xacro"/>
     <xacro:inertials_0032_L86-383 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0080_I148-600_inertials.xacro"/>
     <xacro:inertials_0080_I148-600 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0082_L148-470_inertials.xacro"/>
     <xacro:inertials_0082_L148-470 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0040_D86_inertials.xacro"/>
     <xacro:inertials_0040_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0060_L148-600_inertials.xacro"/>
     <xacro:inertials_0060_L148-600 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0924_E-trical-weights-only-1000g_inertials.xacro"/>
     <xacro:inertials_0924_E-trical-weights-only-1000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0037_D86_inertials.xacro"/>
     <xacro:inertials_0037_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0807_E-Zimmer-GEP5008IO-00-A_ultrasonic_inertials.xacro"/>
     <xacro:inertials_0807_E-Zimmer-GEP5008IO-00-A_ultrasonic mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0018_L86-700_inertials.xacro"/>
     <xacro:inertials_0018_L86-700 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0903_E-gimatic-vacuum_inertials.xacro"/>
     <xacro:inertials_0903_E-gimatic-vacuum mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0100_BD116-KM_inertials.xacro"/>
     <xacro:inertials_0100_BD116-KM mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0093_I86-305_inertials.xacro"/>
     <xacro:inertials_0093_I86-305 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0930_E-trical-weights-only-4000g_inertials.xacro"/>
     <xacro:inertials_0930_E-trical-weights-only-4000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0025_L116-448_inertials.xacro"/>
     <xacro:inertials_0025_L116-448 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/handeye_inertials.xacro"/>
     <xacro:inertials_handeye mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0045_D116_inertials.xacro"/>
     <xacro:inertials_0045_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0022_L86-283_inertials.xacro"/>
     <xacro:inertials_0022_L86-283 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0912_E-trical-with-indicators-1000g_inertials.xacro"/>
     <xacro:inertials_0912_E-trical-with-indicators-1000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/8001_C116-86_inertials.xacro"/>
     <xacro:inertials_8001_C116-86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0092_I86-270_inertials.xacro"/>
     <xacro:inertials_0092_I86-270 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0097_D86-KM_inertials.xacro"/>
     <xacro:inertials_0097_D86-KM mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0028_L116-600_inertials.xacro"/>
     <xacro:inertials_0028_L116-600 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0809_E-Gimatic-SZ32-NC_inertials.xacro"/>
     <xacro:inertials_0809_E-Gimatic-SZ32-NC mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0816_E-Profile-Clamp_inertials.xacro"/>
     <xacro:inertials_0816_E-Profile-Clamp mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0001_D86_inertials.xacro"/>
     <xacro:inertials_0001_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0803_E-Weiss-cr_easy_cig_200-030_inertials.xacro"/>
     <xacro:inertials_0803_E-Weiss-cr_easy_cig_200-030 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0084_L148-870_inertials.xacro"/>
     <xacro:inertials_0084_L148-870 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0073_L86-340_inertials.xacro"/>
     <xacro:inertials_0073_L86-340 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0925_E-trical-weights-only-1500g_inertials.xacro"/>
     <xacro:inertials_0925_E-trical-weights-only-1500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0091_D148_inertials.xacro"/>
     <xacro:inertials_0091_D148 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0807_E-Zimmer-GEP5008IO-00-A_inertials.xacro"/>
     <xacro:inertials_0807_E-Zimmer-GEP5008IO-00-A mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0095_I116-305_inertials.xacro"/>
     <xacro:inertials_0095_I116-305 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0811_E-Schmalz-ECBPi_inertials.xacro"/>
     <xacro:inertials_0811_E-Schmalz-ECBPi mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0068_I116-400_inertials.xacro"/>
     <xacro:inertials_0068_I116-400 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0030_L116-200_inertials.xacro"/>
     <xacro:inertials_0030_L116-200 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0916_E-trical-with-indicators-3000g_inertials.xacro"/>
     <xacro:inertials_0916_E-trical-with-indicators-3000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0094_L86-165_inertials.xacro"/>
     <xacro:inertials_0094_L86-165 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0106_B116-90deg_inertials.xacro"/>
     <xacro:inertials_0106_B116-90deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0081_I148-400_inertials.xacro"/>
     <xacro:inertials_0081_I148-400 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0012_L86-150_inertials.xacro"/>
     <xacro:inertials_0012_L86-150 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0805_E-simple-vacuum-90deg_inertials.xacro"/>
     <xacro:inertials_0805_E-simple-vacuum-90deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0078_L116-350_inertials.xacro"/>
     <xacro:inertials_0078_L116-350 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0029_L116-800_inertials.xacro"/>
     <xacro:inertials_0029_L116-800 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0915_E-trical-with-indicators-2500g_inertials.xacro"/>
     <xacro:inertials_0915_E-trical-with-indicators-2500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/8004_C148_inertials.xacro"/>
     <xacro:inertials_8004_C148 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0907_E-perfecdos_inertials.xacro"/>
     <xacro:inertials_0907_E-perfecdos mesh_filename="${mesh_filename}"/>
+    
     <xacro:include filename="$(find robco_description)/urdf/inertia/0027_L116-500_inertials.xacro"/>
     <xacro:inertials_0027_L116-500 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0024_L116-1000_inertials.xacro"/>
     <xacro:inertials_0024_L116-1000 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0932_E-trical-weights-only-5000g_inertials.xacro"/>
     <xacro:inertials_0932_E-trical-weights-only-5000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0933_E-trical-weights-only-5500g_inertials.xacro"/>
     <xacro:inertials_0933_E-trical-weights-only-5500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0802_E-Zimmer-GEP2006IO-00-B_inertials.xacro"/>
     <xacro:inertials_0802_E-Zimmer-GEP2006IO-00-B mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0003_D116_inertials.xacro"/>
     <xacro:inertials_0003_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0927_E-trical-weights-only-2500g_inertials.xacro"/>
     <xacro:inertials_0927_E-trical-weights-only-2500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0076_I116-600_inertials.xacro"/>
     <xacro:inertials_0076_I116-600 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0046_D148_inertials.xacro"/>
     <xacro:inertials_0046_D148 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0041_D86_inertials.xacro"/>
     <xacro:inertials_0041_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0088_D116_inertials.xacro"/>
     <xacro:inertials_0088_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0066_D116_inertials.xacro"/>
     <xacro:inertials_0066_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0002_D116_inertials.xacro"/>
     <xacro:inertials_0002_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0087_D86_inertials.xacro"/>
     <xacro:inertials_0087_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0117_L148-720_inertials.xacro"/>
     <xacro:inertials_0117_L148-720 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0800_E-generic-IO_inertials.xacro"/>
     <xacro:inertials_0800_E-generic-IO mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0022_L86-286_inertials.xacro"/>
     <xacro:inertials_0022_L86-286 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0047_L148-1000_inertials.xacro"/>
     <xacro:inertials_0047_L148-1000 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0013_L86-200_inertials.xacro"/>
     <xacro:inertials_0013_L86-200 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0039_D86_inertials.xacro"/>
     <xacro:inertials_0039_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0010_I86-600_inertials.xacro"/>
     <xacro:inertials_0010_I86-600 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0052_I148-800_inertials.xacro"/>
     <xacro:inertials_0052_I148-800 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0071_I86-310_inertials.xacro"/>
     <xacro:inertials_0071_I86-310 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0038_D116_inertials.xacro"/>
     <xacro:inertials_0038_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0006_I86-200_inertials.xacro"/>
     <xacro:inertials_0006_I86-200 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0016_L86-500_inertials.xacro"/>
     <xacro:inertials_0016_L86-500 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0011_I86-700_inertials.xacro"/>
     <xacro:inertials_0011_I86-700 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0815_E-ISO50-IO-generic_inertials.xacro"/>
     <xacro:inertials_0815_E-ISO50-IO-generic mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0917_E-trical-with-indicators-3500g_inertials.xacro"/>
     <xacro:inertials_0917_E-trical-with-indicators-3500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0005_I86-150_inertials.xacro"/>
     <xacro:inertials_0005_I86-150 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0940_E-EoPTestLoadDevice-4000g_inertials.xacro"/>
     <xacro:inertials_0940_E-EoPTestLoadDevice-4000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0069_I86-160_inertials.xacro"/>
     <xacro:inertials_0069_I86-160 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0808_E-simple-vacuum-180deg_inertials.xacro"/>
     <xacro:inertials_0808_E-simple-vacuum-180deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0801_E-Schmalz-ECBPMi_inertials.xacro"/>
     <xacro:inertials_0801_E-Schmalz-ECBPMi mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0020_L116-400_inertials.xacro"/>
     <xacro:inertials_0020_L116-400 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0015_L86-400_inertials.xacro"/>
     <xacro:inertials_0015_L86-400 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0026_L116-348_inertials.xacro"/>
     <xacro:inertials_0026_L116-348 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0033_I86-141_inertials.xacro"/>
     <xacro:inertials_0033_I86-141 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0921_E-trical-with-indicators-5500g_inertials.xacro"/>
     <xacro:inertials_0921_E-trical-with-indicators-5500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0079_L116-650_inertials.xacro"/>
     <xacro:inertials_0079_L116-650 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0090_L148-710_inertials.xacro"/>
     <xacro:inertials_0090_L148-710 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/8003_C148-116_inertials.xacro"/>
     <xacro:inertials_8003_C148-116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0931_E-trical-weights-only-4500g_inertials.xacro"/>
     <xacro:inertials_0931_E-trical-weights-only-4500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0064_D86_inertials.xacro"/>
     <xacro:inertials_0064_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0085_D86_inertials.xacro"/>
     <xacro:inertials_0085_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0055_L148-800_inertials.xacro"/>
     <xacro:inertials_0055_L148-800 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0913_E-trical-with-indicators-1500g_inertials.xacro"/>
     <xacro:inertials_0913_E-trical-with-indicators-1500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0810_E-Zimmer-GEP2006IO-45-B_ultrasonic_inertials.xacro"/>
     <xacro:inertials_0810_E-Zimmer-GEP2006IO-45-B_ultrasonic mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0059_I116-650_inertials.xacro"/>
     <xacro:inertials_0059_I116-650 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0109_B116-minus90deg_inertials.xacro"/>
     <xacro:inertials_0109_B116-minus90deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0914_E-trical-with-indicators-2000g_inertials.xacro"/>
     <xacro:inertials_0914_E-trical-with-indicators-2000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0043_D86_inertials.xacro"/>
     <xacro:inertials_0043_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0096_L86-82_inertials.xacro"/>
     <xacro:inertials_0096_L86-82 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0813_E-Weiss-cr_easy_cig_200-030_ultrasonic_inertials.xacro"/>
     <xacro:inertials_0813_E-Weiss-cr_easy_cig_200-030_ultrasonic mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0929_E-trical-weights-only-3500g_inertials.xacro"/>
     <xacro:inertials_0929_E-trical-weights-only-3500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0923_E-trical-weights-only-500g_inertials.xacro"/>
     <xacro:inertials_0923_E-trical-weights-only-500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0103_B86_inertials.xacro"/>
     <xacro:inertials_0103_B86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0063_L148-400_inertials.xacro"/>
     <xacro:inertials_0063_L148-400 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0035_L86-336_inertials.xacro"/>
     <xacro:inertials_0035_L86-336 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0008_I86-400_inertials.xacro"/>
     <xacro:inertials_0008_I86-400 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0918_E-trical-with-indicators-4000g_inertials.xacro"/>
     <xacro:inertials_0918_E-trical-with-indicators-4000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0049_I116-1000_inertials.xacro"/>
     <xacro:inertials_0049_I116-1000 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0021_L86-183_inertials.xacro"/>
     <xacro:inertials_0021_L86-183 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0057_L148-550_inertials.xacro"/>
     <xacro:inertials_0057_L148-550 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0083_L148-670_inertials.xacro"/>
     <xacro:inertials_0083_L148-670 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0904_E-ECBPMi-fraunhofer_inertials.xacro"/>
     <xacro:inertials_0904_E-ECBPMi-fraunhofer mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0021_L86-186_inertials.xacro"/>
     <xacro:inertials_0021_L86-186 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0099_I86-220_inertials.xacro"/>
     <xacro:inertials_0099_I86-220 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0051_I116-800_inertials.xacro"/>
     <xacro:inertials_0051_I116-800 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0941_E-Schunk-EMH-RP-045-B_inertials.xacro"/>
     <xacro:inertials_0941_E-Schunk-EMH-RP-045-B mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0812_E-ISO50-IO-3xM8_inertials.xacro"/>
     <xacro:inertials_0812_E-ISO50-IO-3xM8 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0104_B86-90deg_inertials.xacro"/>
     <xacro:inertials_0104_B86-90deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0017_L86-600_inertials.xacro"/>
     <xacro:inertials_0017_L86-600 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0919_E-trical-with-indicators-4500g_inertials.xacro"/>
     <xacro:inertials_0919_E-trical-with-indicators-4500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0806_E-Piab-VGS4005-SX12_inertials.xacro"/>
     <xacro:inertials_0806_E-Piab-VGS4005-SX12 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0056_I116-500_inertials.xacro"/>
     <xacro:inertials_0056_I116-500 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0911_E-trical-with-indicators-500g_inertials.xacro"/>
     <xacro:inertials_0911_E-trical-with-indicators-500g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0009_I86-500_inertials.xacro"/>
     <xacro:inertials_0009_I86-500 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0070_L86-350_inertials.xacro"/>
     <xacro:inertials_0070_L86-350 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0054_L116-300_inertials.xacro"/>
     <xacro:inertials_0054_L116-300 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0118_L116-700_inertials.xacro"/>
     <xacro:inertials_0118_L116-700 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0814_E-Schmalz-ECBPMi_ultrasonic_inertials.xacro"/>
     <xacro:inertials_0814_E-Schmalz-ECBPMi_ultrasonic mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0920_E-trical-with-indicators-5000g_inertials.xacro"/>
     <xacro:inertials_0920_E-trical-with-indicators-5000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0042_D86_inertials.xacro"/>
     <xacro:inertials_0042_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0906_E-gimatic-sz25-koch_inertials.xacro"/>
     <xacro:inertials_0906_E-gimatic-sz25-koch mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0098_D116-KM_inertials.xacro"/>
     <xacro:inertials_0098_D116-KM mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0112_D148-KM_inertials.xacro"/>
     <xacro:inertials_0112_D148-KM mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0067_D148_inertials.xacro"/>
     <xacro:inertials_0067_D148 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0116_BD148-KM_inertials.xacro"/>
     <xacro:inertials_0116_BD148-KM mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0089_D116_inertials.xacro"/>
     <xacro:inertials_0089_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/8000_C86_inertials.xacro"/>
     <xacro:inertials_8000_C86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0926_E-trical-weights-only-2000g_inertials.xacro"/>
     <xacro:inertials_0926_E-trical-weights-only-2000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0036_L86-250_inertials.xacro"/>
     <xacro:inertials_0036_L86-250 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0110_B148-90deg_inertials.xacro"/>
     <xacro:inertials_0110_B148-90deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0086_D116_inertials.xacro"/>
     <xacro:inertials_0086_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0074_L86-440_inertials.xacro"/>
     <xacro:inertials_0074_L86-440 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0061_D86_inertials.xacro"/>
     <xacro:inertials_0061_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/8002_C116_inertials.xacro"/>
     <xacro:inertials_8002_C116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0058_I148-650_inertials.xacro"/>
     <xacro:inertials_0058_I148-650 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0062_I116-750_inertials.xacro"/>
     <xacro:inertials_0062_I116-750 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0053_I116-300_inertials.xacro"/>
     <xacro:inertials_0053_I116-300 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0910_E-trical-with-indicators-0g_inertials.xacro"/>
     <xacro:inertials_0910_E-trical-with-indicators-0g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0044_D116_inertials.xacro"/>
     <xacro:inertials_0044_D116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0075_I116-450_inertials.xacro"/>
     <xacro:inertials_0075_I116-450 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0065_D86_inertials.xacro"/>
     <xacro:inertials_0065_D86 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0014_L86-300_inertials.xacro"/>
     <xacro:inertials_0014_L86-300 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/hand_inertials.xacro"/>
     <xacro:inertials_hand mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0034_I86-350_inertials.xacro"/>
     <xacro:inertials_0034_I86-350 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0023_I86-250_inertials.xacro"/>
     <xacro:inertials_0023_I86-250 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0928_E-trical-weights-only-3000g_inertials.xacro"/>
     <xacro:inertials_0928_E-trical-weights-only-3000g mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0105_B116_inertials.xacro"/>
     <xacro:inertials_0105_B116 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0050_I148-1000_inertials.xacro"/>
     <xacro:inertials_0050_I148-1000 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0111_B148_inertials.xacro"/>
     <xacro:inertials_0111_B148 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0113_I86-Robominds-Camera-Module_inertials.xacro"/>
     <xacro:inertials_0113_I86-Robominds-Camera-Module mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0108_B86-minus90deg_inertials.xacro"/>
     <xacro:inertials_0108_B86-minus90deg mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0804_E-simple-ISO50_inertials.xacro"/>
     <xacro:inertials_0804_E-simple-ISO50 mesh_filename="${mesh_filename}"/>
+
     <xacro:include filename="$(find robco_description)/urdf/inertia/0072_L86-240_inertials.xacro"/>
     <xacro:inertials_0072_L86-240 mesh_filename="${mesh_filename}"/>
+    
     <xacro:include filename="$(find robco_description)/urdf/inertia/0922_E-trical-weights-only-0g_inertials.xacro"/>
     <xacro:inertials_0922_E-trical-weights-only-0g mesh_filename="${mesh_filename}"/>
   </xacro:macro>
