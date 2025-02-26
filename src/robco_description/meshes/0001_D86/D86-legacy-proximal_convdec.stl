@@ -1,4 +1,4 @@
-solid robot 
+solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/D86/D86_convexDecompose.stl_created_by_BoundingMesh
     facet normal 1 -0.000731431 0.000456211
         outer loop
             vertex 0.0455059 -0.0435818 0.0620253
@@ -1105,4 +1105,4 @@ solid robot
             vertex -0.07065 -1.5233e-017 0.104263
         endloop
     endfacet
-endsolid
+endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/D86/D86_convexDecompose.stl_created_by_BoundingMesh

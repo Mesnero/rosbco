@@ -1,4 +1,4 @@
-solid robot
+solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0803_E-Weiss-cr_easy_cig_200-030/0803_E-Weiss-cr_easy_cig_200-030.stl_created_by_BoundingMesh
     facet normal -0.815883 0.556888 0.155595
         outer loop
             vertex -0.0088163 0.00923611 0.0062234
@@ -47774,21 +47774,21 @@ solid robot
             vertex -0.031 0.0035812 0.0823249
         endloop
     endfacet
-    facet normal 0.0 0.0 0.0
+    facet normal -1.#IND -1.#IND -1.#IND
         outer loop
             vertex -0.031 0.00544979 0.0782
             vertex -0.031 0.00488597 0.0782
             vertex -0.031 0.005013 0.0782
         endloop
     endfacet
-    facet normal 0.0 0.0 0.0
+    facet normal -1.#IND -1.#IND -1.#IND
         outer loop
             vertex -0.031 0.005013 0.0782
             vertex -0.031 0.00519868 0.0782
             vertex -0.031 0.00544979 0.0782
         endloop
     endfacet
-    facet normal 0.0 0.0 0.0
+    facet normal -1.#IND -1.#IND -1.#IND
         outer loop
             vertex -0.031 0.00544979 0.0782
             vertex -0.031 0.00519868 0.0782
@@ -75459,4 +75459,4 @@ solid robot
             vertex -0.0294121 0.033 0.102512
         endloop
     endfacet
-endsolid
+endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0803_E-Weiss-cr_easy_cig_200-030/0803_E-Weiss-cr_easy_cig_200-030.stl_created_by_BoundingMesh

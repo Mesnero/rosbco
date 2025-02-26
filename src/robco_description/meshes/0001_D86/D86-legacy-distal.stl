@@ -1,4 +1,4 @@
-solid robot
+solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0065_D86/D86-papa-distal.stl_created_by_BoundingMesh
     facet normal -0.872452 0.457942 -0.170635
         outer loop
             vertex 0.0323188 0.088675 0.0636511
@@ -27369,4 +27369,4 @@ solid robot
             vertex 0.0119428 0.0522892 0.0489362
         endloop
     endfacet
-endsolid
+endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0065_D86/D86-papa-distal.stl_created_by_BoundingMesh

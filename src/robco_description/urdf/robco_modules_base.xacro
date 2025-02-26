@@ -1,25 +1,23 @@
 <?xml version="1.0"?>
+<robot xmlns="http://www.ros.org" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="description_package" value="robco_description" />
+    <xacro:property name="default_prefix" value="robco" />
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:property name="description_package" value="$(find robco_description)" />
-    <xacro:include filename="$(find robco_description)/urdf/inertials.xacro"/>
-
-    <xacro:macro name="robco_base_module" params="name mesh_filename tf_rpy tf_xyz next">
+    <xacro:macro name="robco_base_module"
+        params="name mesh_filename tf_rpy tf_xyz proximal_mass proximal_ixx proximal_ixy proximal_ixz proximal_iyy proximal_iyz proximal_izz proximal_com_xyz next">
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
-                <material name="Gray">
-                    <color rgba="0.9 0.9 0.9 1.0" />
-                </material>
             </visual>
-            <collision>
-                <geometry>
-                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
-                </geometry>
-            </collision>
-            <xacro:inertials mesh_filename="${mesh_filename}"/>
+            <inertial>
+                <mass value="${proximal_mass}" />
+                <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
+                    iyy="${proximal_iyy}" iyz="${proximal_iyz}"
+                    izz="${proximal_izz}" />
+                <origin rpy="0 0 0" xyz="${proximal_com_xyz}" />
+            </inertial>
         </link>
 
         <xacro:if value="${next != ''}">
@@ -31,22 +29,21 @@
         </xacro:if>
     </xacro:macro>
 
-    <xacro:macro name="robco_link_module" params="name mesh_filename tf_rpy tf_xyz next">
+    <xacro:macro name="robco_link_module"
+        params="name mesh_filename tf_rpy tf_xyz proximal_mass proximal_ixx proximal_ixy proximal_ixz proximal_iyy proximal_iyz proximal_izz proximal_com_xyz next">
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
-                <material name="Gray">
-                    <color rgba="0.9 0.9 0.9 1.0" />
-                </material>
             </visual>
-            <collision>
-                <geometry>
-                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
-                </geometry>
-            </collision>
-            <xacro:inertials mesh_filename="${mesh_filename}"/>
+            <inertial>
+                <mass value="${proximal_mass}" />
+                <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
+                    iyy="${proximal_iyy}" iyz="${proximal_iyz}"
+                    izz="${proximal_izz}" />
+                <origin rpy="0 0 0" xyz="${proximal_com_xyz}" />
+            </inertial>
         </link>
 
         <xacro:if value="${next != ''}">
@@ -59,25 +56,40 @@
     </xacro:macro>
 
     <xacro:macro name="robco_drive_module"
-        params="name proximal_mesh_filename distal_mesh_filename proximal_tf_rpy proximal_tf_xyz distal_tf_rpy distal_tf_xyz lim_lower:=-4.7124 lim_upper:=4.7124 next">
+        params="name proximal_mesh_filename distal_mesh_filename proximal_tf_rpy proximal_tf_xyz distal_tf_rpy distal_tf_xyz lim_lower:=-4.7124 lim_upper:=4.7124 proximal_mass proximal_ixx proximal_ixy proximal_ixz proximal_iyy proximal_iyz proximal_izz proximal_com_xyz distal_mass distal_ixx distal_ixy distal_ixz distal_iyy distal_iyz distal_izz distal_com_xyz next">
         <!-- proximal link, calle ${name} to keep compatibility with next=... parameter -->
         <link name="${name}">
             <visual>
                 <geometry>
                     <mesh
-                        filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
+                        filename="package://${description_package}/meshes/${proximal_mesh_filename}" />
                 </geometry>
-                <material name="Gray">
-                    <color rgba="0.9 0.9 0.9 1.0" />
-                </material>
             </visual>
-            <collision>
+            <inertial>
+                <mass value="${proximal_mass}" />
+                <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
+                    iyy="${proximal_iyy}" iyz="${proximal_iyz}"
+                    izz="${proximal_izz}" />
+                <origin rpy="0 0 0" xyz="${proximal_com_xyz}" />
+            </inertial>
+        </link>
+
+        <link name="${name}_shaft">
+        </link>
+
+        <link name="${name}_distal">
+            <visual>
                 <geometry>
-                    <mesh
-                        filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
+                    <mesh filename="package://${description_package}/meshes/${distal_mesh_filename}" />
                 </geometry>
-            </collision>
-            <xacro:inertials mesh_filename="${proximal_mesh_filename}"/>
+            </visual>
+            <inertial>
+                <mass value="${distal_mass}" />
+                <inertia ixx="${distal_ixx}" ixy="${distal_ixy}" ixz="${distal_ixz}"
+                    iyy="${distal_iyy}" iyz="${distal_iyz}"
+                    izz="${distal_izz}" />
+                <origin rpy="0 0 0" xyz="${distal_com_xyz}" />
+            </inertial>
         </link>
 
         <joint name="${name}__${name}_shaft" type="fixed">
@@ -85,10 +97,6 @@
             <parent link="${name}" />
             <child link="${name}_shaft" />
         </joint>
-
-        <link name="${name}_shaft">
-            <xacro:inertials mesh_filename=""/>
-        </link>
 
         <joint name="${name}_joint" type="revolute">
             <origin rpy="${distal_tf_rpy}" xyz="${distal_tf_xyz}" />
@@ -98,23 +106,6 @@
             <child link="${name}_distal" />
         </joint>
 
-        <link name="${name}_distal">
-            <visual>
-                <geometry>
-                    <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
-                </geometry>
-                <material name="Gray">
-                    <color rgba="0.9 0.9 0.9 1.0" />
-                </material>
-            </visual>
-            <collision>
-                <geometry>
-                    <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
-                </geometry>
-            </collision>
-            <xacro:inertials mesh_filename="${distal_mesh_filename}"/>
-        </link>
-
         <xacro:if value="${next != ''}">
             <joint name="${name}_distal__${next}" type="fixed">
                 <parent link="${name}_distal" />
@@ -123,22 +114,21 @@
         </xacro:if>
     </xacro:macro>
 
-    <xacro:macro name="robco_end_effector" params="name mesh_filename tf_rpy tf_xyz">
+    <xacro:macro name="robco_end_effector"
+        params="name mesh_filename tf_rpy tf_xyz proximal_mass proximal_ixx proximal_ixy proximal_ixz proximal_iyy proximal_iyz proximal_izz proximal_com_xyz">
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
-                <material name="Red">
-                    <color rgba="1.0 0 0 1.0" />
-                </material>
             </visual>
-            <collision>
-                <geometry>
-                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
-                </geometry>
-            </collision>
-            <xacro:inertials mesh_filename="${mesh_filename}"/>
+            <inertial>
+                <mass value="${proximal_mass}" />
+                <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
+                    iyy="${proximal_iyy}" iyz="${proximal_iyz}"
+                    izz="${proximal_izz}" />
+                <origin rpy="0 0 0" xyz="${proximal_com_xyz}" />
+            </inertial>
         </link>
     </xacro:macro>
 
