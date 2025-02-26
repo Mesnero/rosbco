@@ -3,8 +3,8 @@
 /log
 /.vscode
 /messages.txt
-/test_socket.py
+/.cache
+check_missing.py
+test_socket.py
 client.py
 inertia_xacro.py
-/.cache
-compile_commands.json

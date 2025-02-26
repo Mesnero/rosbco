@@ -79,7 +79,6 @@ def generate_launch_description():
         ],
     )
 )
-
     nodes = [
         node_robot_state_publisher,
         gazebo,

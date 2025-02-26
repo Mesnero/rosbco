@@ -4,7 +4,8 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, FindExecutable, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-
+from launch.actions import RegisterEventHandler, TimerAction
+from launch.event_handlers import OnProcessExit
 
 def generate_launch_description():
     
@@ -55,14 +56,27 @@ def generate_launch_description():
         parameters=[{"use_sim_time": True}]
     )
     
+    delay_controller_spawning = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=gz_spawn_entity,
+            on_exit=[
+                TimerAction(
+                    period=3.0, 
+                    actions=[
+                        joint_state_broadcaster_spawner,
+                        robot_controller_spawner
+                    ],
+                )
+            ]
+        )   
+    )
 
     nodes = [
         robot_state_publisher,
         gazebo,
         gz_spawn_entity,
         joint_state_publisher,
-        joint_state_broadcaster_spawner,
-        robot_controller_spawner
+        delay_controller_spawning
     ]
 
     return LaunchDescription(nodes)

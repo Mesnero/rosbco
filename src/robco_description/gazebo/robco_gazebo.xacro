@@ -6,12 +6,11 @@
 
     <!-- ros_control plugin -->
     <gazebo>
-    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-        <parameters>$(find robco_description)/ros2_control/ros2_controllers.yaml</parameters>
-        <controlPeriod>0.01</controlPeriod>
+      <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+          <parameters>$(find robco_description)/ros2_control/ros2_controllers.yaml</parameters>
+          <controlPeriod>0.01</controlPeriod>
       </plugin>
     </gazebo>
-
     
     <gazebo reference="base">
       <material>Gazebo/Gray</material>
@@ -97,117 +96,8 @@
       <material>Gazebo/Gray</material>
     </gazebo> 
 
-    <gazebo reference="robco_handeye">
+    <gazebo reference="effector">
       <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_handeye_flange">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_hand">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_palm">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_left_finger">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_right_finger">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_left_fingertip">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_right_fingertip">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="robco_hand_tcp">
-      <material>Gazebo/Gray</material>
-    </gazebo>
-
-    <gazebo reference="base__drive1">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive1__drive1_shaft">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive1_distal__drive2">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive2__drive2_shaft">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive2_distal__link0">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="link0__drive3">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive3__drive3_shaft">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive3_distal__drive4">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive4__drive4_shaft">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive4_distal__link1">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="link1__drive5">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive5__drive5_shaft">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive5_distal__drive6">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive6__drive6_shaft">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="drive6_distal__robco_handeye">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="robco_handeye_flange_joint">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="robco_hand_joint">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="robco_palmjoint">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
-
-    <gazebo reference="robco_hand_tcp_joint">
-      <preserveFixedJoint>true</preserveFixedJoint>
-    </gazebo>
+    </gazebo> 
   </xacro:macro>
-
 </robot>

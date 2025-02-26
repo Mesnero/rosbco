@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns="http://www.ros.org" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:property name="description_package" value="$(find robco_description)" />
-    <xacro:property name="default_prefix" value="robco" />
 
     <xacro:macro name="robco_base_module"
         params="name mesh_filename tf_rpy tf_xyz proximal_mass proximal_ixx proximal_ixy proximal_ixz proximal_iyy proximal_iyz proximal_izz proximal_com_xyz next">
@@ -74,8 +73,27 @@
             </inertial>
         </link>
 
+        <joint name="${name}__${name}_shaft" type="fixed">
+            <origin rpy="${proximal_tf_rpy}" xyz="${proximal_tf_xyz}" />
+            <parent link="${name}" />
+            <child link="${name}_shaft" />
+        </joint>
+
         <link name="${name}_shaft">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="0.001"/>
+                <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+            </inertial>
         </link>
+
+        <joint name="${name}_joint" type="revolute">
+            <origin rpy="${distal_tf_rpy}" xyz="${distal_tf_xyz}" />
+            <axis xyz="0 0 1" />
+            <limit lower="${lim_lower}" upper="${lim_upper}" effort="0" velocity="4.25" />
+            <parent link="${name}_shaft" />
+            <child link="${name}_distal" />
+        </joint>
 
         <link name="${name}_distal">
             <visual>
@@ -91,20 +109,6 @@
                 <origin rpy="0 0 0" xyz="${distal_com_xyz}" />
             </inertial>
         </link>
-
-        <joint name="${name}__${name}_shaft" type="fixed">
-            <origin rpy="${proximal_tf_rpy}" xyz="${proximal_tf_xyz}" />
-            <parent link="${name}" />
-            <child link="${name}_shaft" />
-        </joint>
-
-        <joint name="${name}_joint" type="revolute">
-            <origin rpy="${distal_tf_rpy}" xyz="${distal_tf_xyz}" />
-            <axis xyz="0 0 1" />
-            <limit lower="${lim_lower}" upper="${lim_upper}" effort="0" velocity="4.25" />
-            <parent link="${name}_shaft" />
-            <child link="${name}_distal" />
-        </joint>
 
         <xacro:if value="${next != ''}">
             <joint name="${name}_distal__${next}" type="fixed">

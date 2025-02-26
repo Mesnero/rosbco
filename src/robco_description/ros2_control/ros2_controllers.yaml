@@ -7,9 +7,12 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
+    joint_group_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+
 joint_group_velocity_controller:
   ros__parameters:
-    type: velocity_controllers/JointGroupVelocityController
     joints:
       - drive1_joint
       - drive2_joint

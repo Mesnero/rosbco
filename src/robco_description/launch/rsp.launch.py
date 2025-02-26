@@ -13,7 +13,7 @@ def generate_launch_description():
         Command(
             ['xacro ',             
                  PathJoinSubstitution([FindPackageShare('robco_description'), 'urdf', 'robco.xacro']),
-                ' use_gazebo:=false'
+                ' use_gazebo:=true'
             ])
         ,value_type=str)
     
