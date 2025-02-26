@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns="http://www.ros.org" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:property name="description_package" value="robco_description" />
+    <xacro:property name="description_package" value="$(find robco_description)" />
     <xacro:property name="default_prefix" value="robco" />
 
     <xacro:macro name="robco_base_module"
@@ -8,7 +8,7 @@
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </visual>
             <inertial>
@@ -34,7 +34,7 @@
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </visual>
             <inertial>
@@ -62,7 +62,7 @@
             <visual>
                 <geometry>
                     <mesh
-                        filename="package://${description_package}/meshes/${proximal_mesh_filename}" />
+                        filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
                 </geometry>
             </visual>
             <inertial>
@@ -80,7 +80,7 @@
         <link name="${name}_distal">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${distal_mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
                 </geometry>
             </visual>
             <inertial>
@@ -119,7 +119,7 @@
         <link name="${name}">
             <visual>
                 <geometry>
-                    <mesh filename="package://${description_package}/meshes/${mesh_filename}" />
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </visual>
             <inertial>

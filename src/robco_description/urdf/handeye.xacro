@@ -32,7 +32,6 @@
           <box size="${0.075+safety_distance} ${0.03+safety_distance} ${0.012+safety_distance}" />
         </geometry>
       </collision>
-      <xacro:inertials mesh_filename="handeye/d415_mount.stl"></xacro:inertials>      
     </link>
 
     <joint name="${ns}_handeye_flange_joint" type="fixed">

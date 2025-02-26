@@ -29,7 +29,6 @@
           <cylinder radius="${0.038+safety_distance}" length="0.012" />
         </geometry>
       </collision>
-      <xacro:inertials mesh_filename="hand/quick_changer.stl"></xacro:inertials>
     </link>
 
     <joint name="${ns}_palmjoint" type="fixed">
@@ -53,7 +52,6 @@
           <box size="${2*0.018+safety_distance} ${0.036*2+safety_distance} ${0.13+safety_distance}" />
         </geometry>
       </collision>
-      <xacro:inertials mesh_filename="hand/rg2_palm.stl"></xacro:inertials>
     </link>
 
     <joint name="${ns}_left_finger_joint" type="revolute">
@@ -87,7 +85,6 @@
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
-      <xacro:inertials mesh_filename="hand/rg2_leftfinger.stl"></xacro:inertials>
     </link>
 
     <!-- MISSING COLLISION -->
@@ -100,7 +97,6 @@
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
-      <xacro:inertials mesh_filename="hand/rg2_rightfinger.stl"></xacro:inertials>
     </link>
 
     <joint name="${ns}_left_fingertip_joint" type="revolute">
@@ -137,7 +133,6 @@
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
       </visual>
-      <xacro:inertials mesh_filename="hand/rg2_leftfinger_tip.stl"></xacro:inertials>
     </link>
     <!-- MISSING COLLISION -->
     <link name="${ns}_right_fingertip">
@@ -148,9 +143,7 @@
         <material name="Gray">
           <color rgba="0.9 0.9 0.9 1.0" />
         </material>
-      </visual>
-      <xacro:inertials mesh_filename="hand/rg2_rightfinger_tip.stl"></xacro:inertials>
-      
+      </visual>      
     </link>
 
 
