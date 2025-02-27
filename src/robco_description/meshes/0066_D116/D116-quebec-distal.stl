@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0066_D116/D116-quebec-distal.stl_created_by_BoundingMesh
+solid robot
     facet normal 0 0 1
         outer loop
             vertex -0.00535727 0.0209785 -0.011
@@ -28965,4 +28965,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0319323 -0.0164511 -0.000381033
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0066_D116/D116-quebec-distal.stl_created_by_BoundingMesh
+endsolid

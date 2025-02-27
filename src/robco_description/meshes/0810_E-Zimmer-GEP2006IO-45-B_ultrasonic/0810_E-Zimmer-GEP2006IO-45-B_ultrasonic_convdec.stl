@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0810_E-Zimmer-GEP2006IO-45-B_ultrasonic/0810_E-Zimmer-GEP2006IO-45-B_ultrasonic_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.374169 -0.659993 -0.651465
         outer loop
             vertex 0.020459 -0.0269859 -0.000341559
@@ -895,4 +895,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.0336304 0.0276105 0.0489158
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0810_E-Zimmer-GEP2006IO-45-B_ultrasonic/0810_E-Zimmer-GEP2006IO-45-B_ultrasonic_convdec.stl_created_by_BoundingMesh
+endsolid

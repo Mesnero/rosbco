@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0086_D116/876.0002-G_proximal.stl_created_by_BoundingMesh
+solid robot
     facet normal -0.448942 0.0401378 -0.892659
         outer loop
             vertex 0.021537 -0.0072808 0.000583588
@@ -33116,4 +33116,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0261866 0.0328369 0.01
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0086_D116/876.0002-G_proximal.stl_created_by_BoundingMesh
+endsolid

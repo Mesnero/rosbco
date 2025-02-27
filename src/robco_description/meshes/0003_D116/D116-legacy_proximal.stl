@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/M110/M110_proximal.stl_created_by_BoundingMesh
+solid robot
     facet normal 1 0 0
         outer loop
             vertex -0.0134894 0.0496 0.082
@@ -12739,4 +12739,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLi
             vertex 0.011 -0.0423614 0.0365402
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/M110/M110_proximal.stl_created_by_BoundingMesh
+endsolid

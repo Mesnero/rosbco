@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0067_D148/D148-romeo-distal.stl_created_by_BoundingMesh
+solid robot
     facet normal 0 -0 1
         outer loop
             vertex 0.07376 -0.00595453 -0.0127
@@ -30197,4 +30197,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.071 -6.4438e-005 -0.0175
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0067_D148/D148-romeo-distal.stl_created_by_BoundingMesh
+endsolid

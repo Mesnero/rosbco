@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0086_D116/876.0002-G_proximal_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.218272 -0.640312 -0.73645
         outer loop
             vertex 0.0293258 -0.0511544 0.01
@@ -1455,4 +1455,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0894935 -0.0517098 0.0845963
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0086_D116/876.0002-G_proximal_convdec.stl_created_by_BoundingMesh
+endsolid

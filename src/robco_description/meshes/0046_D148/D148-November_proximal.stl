@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Desktop/D148-November/D148-November_proximal.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.108154 -0.0339336 0.993555
         outer loop
             vertex -0.0187367 0.00720394 0.00974553
@@ -40669,4 +40669,4 @@ solid D:/Users/Paul Maroldt/Desktop/D148-November/D148-November_proximal.stl_cre
             vertex -0.00348008 -0.0597502 0.0594496
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Desktop/D148-November/D148-November_proximal.stl_created_by_BoundingMesh
+endsolid

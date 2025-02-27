@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0804_E-ISO50-V1/0804_E-ISO50-V1_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.530113 0.58614 -0.612715
         outer loop
             vertex 0.0216882 0.0268126 -2.9767e-006
@@ -1525,4 +1525,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.0363548 -0.0212108 0.0527014
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0804_E-ISO50-V1/0804_E-ISO50-V1_convdec.stl_created_by_BoundingMesh
+endsolid

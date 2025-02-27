@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/L150-L-80-80/L150-L-80-80_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.919497 -0.390231 -0.0473785
         outer loop
             vertex 0.154238 -0.0250781 0.0606226
@@ -1119,4 +1119,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLi
             vertex 0.140027 -0.0177662 0.0134142
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/L150-L-80-80/L150-L-80-80_convdec.stl_created_by_BoundingMesh
+endsolid

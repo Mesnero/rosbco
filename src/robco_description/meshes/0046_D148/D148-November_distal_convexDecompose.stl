@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/gen2_robot_data/ModuleLibrary/D148-November/D148-November_distal_convexDecompose.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.974081 0.168388 0.151037
         outer loop
             vertex 0.0736323 0.0127201 -0.0176021
@@ -979,4 +979,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/gen2_robot_data/Modu
             vertex -0.0532511 -0.0344292 1.04308e-010
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/gen2_robot_data/ModuleLibrary/D148-November/D148-November_distal_convexDecompose.stl_created_by_BoundingMesh
+endsolid

@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0067_D148/D148-romeo-proximal_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal -0.407465 0.225613 -0.884913
         outer loop
             vertex -0.0513305 0.0410475 -0.000210963
@@ -1301,4 +1301,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.0203078 0.0410997 0.165746
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0067_D148/D148-romeo-proximal_convdec.stl_created_by_BoundingMesh
+endsolid

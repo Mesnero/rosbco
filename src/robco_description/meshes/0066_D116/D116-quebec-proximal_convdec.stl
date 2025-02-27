@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0066_D116/D116-quebec-proximal_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.987624 0.0804425 0.134642
         outer loop
             vertex 0.054 0.0206287 0.136966
@@ -1231,4 +1231,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.100257 -0.00638032 0.0158081
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0066_D116/D116-quebec-proximal_convdec.stl_created_by_BoundingMesh
+endsolid

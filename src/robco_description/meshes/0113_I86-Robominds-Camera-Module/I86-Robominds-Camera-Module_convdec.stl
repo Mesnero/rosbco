@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0113_robominds-camera-module/robominds-camera-module_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal -0.626495 0.455179 0.632705
         outer loop
             vertex -0.0276893 0.0346441 0.08
@@ -811,4 +811,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0334183 -0.00930929 0.09
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0113_robominds-camera-module/robominds-camera-module_convdec.stl_created_by_BoundingMesh
+endsolid

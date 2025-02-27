@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/D116-Delta/D116-Delta_proximal_convexDecompose.stl_created_by_BoundingMesh
+solid robot
     facet normal 1 -0.000572158 -0.000130659
         outer loop
             vertex 0.0540008 -0.0587333 0.0847978
@@ -979,4 +979,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLi
             vertex 0.010471 6.06069e-017 0.140783
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/D116-Delta/D116-Delta_proximal_convexDecompose.stl_created_by_BoundingMesh
+endsolid

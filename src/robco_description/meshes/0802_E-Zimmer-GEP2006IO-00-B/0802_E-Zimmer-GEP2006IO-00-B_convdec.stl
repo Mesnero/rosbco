@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0802_E-Zimmer-GEP2006IO-00-B/0802_E-Zimmer-GEP2006IO-00-B_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal -0.750795 0.603276 -0.269007
         outer loop
             vertex -0.0319971 0.0365671 0.0287886
@@ -993,4 +993,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.00154108 0.0232 0.14348
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0802_E-Zimmer-GEP2006IO-00-B/0802_E-Zimmer-GEP2006IO-00-B_convdec.stl_created_by_BoundingMesh
+endsolid

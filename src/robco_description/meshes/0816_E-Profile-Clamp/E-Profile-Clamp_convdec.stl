@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0816_E-profile-clamp/0816_E-profile-clamp_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.451125 0.892439 0.00626097
         outer loop
             vertex 0.0122891 0.0419816 0.038
@@ -1035,4 +1035,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0349079 0.025346 0.0285438
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0816_E-profile-clamp/0816_E-profile-clamp_convdec.stl_created_by_BoundingMesh
+endsolid

@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0806_E-Piab-VGS4005-SX12/0806_E-Piab-VGS4005-SX12_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.00922093 0.0304848 0.999493
         outer loop
             vertex -0.0132003 -0.00327991 0.0687893
@@ -713,4 +713,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.00124118 -0.0154465 0.0680592
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0806_E-Piab-VGS4005-SX12/0806_E-Piab-VGS4005-SX12_convdec.stl_created_by_BoundingMesh
+endsolid

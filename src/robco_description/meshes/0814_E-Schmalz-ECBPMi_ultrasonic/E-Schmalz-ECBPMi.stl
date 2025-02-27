@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0801_E-Schmalz-ECBPMi/0801_E-Schmalz-ECBPMi.stl_created_by_BoundingMesh
+solid robot
     facet normal -0.0213276 -0.0965287 -0.995102
         outer loop
             vertex -0.00806344 0.00846758 0.00396003
@@ -17513,4 +17513,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.02178 -0.0205362 0.0701
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0801_E-Schmalz-ECBPMi/0801_E-Schmalz-ECBPMi.stl_created_by_BoundingMesh
+endsolid

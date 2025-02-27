@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/E-gimatic-vacuum/E-gimatic-vacuum_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 8.40471e-009 -0.205645 -0.978627
         outer loop
             vertex -0.104186 -0.129734 -0.00839674
@@ -587,4 +587,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLi
             vertex -0.120028 -0.129544 0.117094
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/modrob-gen2/ModuleLibrary/E-gimatic-vacuum/E-gimatic-vacuum_convdec.stl_created_by_BoundingMesh
+endsolid

@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/L116-350_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.981239 -0.11582 -0.154127
         outer loop
             vertex 0.35 -0.0436311 0.0428099
@@ -1511,4 +1511,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0027215 0.00487175 0.111182
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/L116-350_convdec.stl_created_by_BoundingMesh
+endsolid

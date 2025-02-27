@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0803_E-Weiss-cr_easy_cig_200-030/0803_E-Weiss-cr_easy_cig_200-030_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.0791406 0.799407 -0.595554
         outer loop
             vertex 0.000640572 0.0348228 -1.20475e-005
@@ -1343,4 +1343,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex -0.0332032 0.00970036 -6.99677e-006
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0803_E-Weiss-cr_easy_cig_200-030/0803_E-Weiss-cr_easy_cig_200-030_convdec.stl_created_by_BoundingMesh
+endsolid

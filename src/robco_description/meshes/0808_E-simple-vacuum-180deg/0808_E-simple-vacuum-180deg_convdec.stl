@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0808_E-simple-vacuum-180deg/0808_E-simple-vacuum-180deg_convdec.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.879658 0.472963 0.0500674
         outer loop
             vertex 0.0373323 0.0224416 0.011
@@ -1217,4 +1217,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.0426274 -0.00661645 0.0219934
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0808_E-simple-vacuum-180deg/0808_E-simple-vacuum-180deg_convdec.stl_created_by_BoundingMesh
+endsolid

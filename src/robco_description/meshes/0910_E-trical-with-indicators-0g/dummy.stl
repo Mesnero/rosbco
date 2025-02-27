@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0910_E-trical-with-indicators-0g/dummy.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.834618 0.0573487 -0.547836
         outer loop
             vertex 0.0382912 0.00271929 -0.033085
@@ -4087,4 +4087,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.0486361 -0.00773476 -0.0108364
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/0910_E-trical-with-indicators-0g/dummy.stl_created_by_BoundingMesh
+endsolid

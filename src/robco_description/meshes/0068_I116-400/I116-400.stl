@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/gen2_robot_data/ModuleLibrary/I116-400/I116-400.stl_created_by_BoundingMesh
+solid robot
     facet normal 0.62792 -0.77815 0.0140869
         outer loop
             vertex -0.0112346 0.00894184 0.00723531
@@ -46199,4 +46199,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/gen2_robot_data/Modu
             vertex -0.0339438 0.0212764 0.0237686
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/gen2_robot_data/ModuleLibrary/I116-400/I116-400.stl_created_by_BoundingMesh
+endsolid

@@ -1,4 +1,4 @@
-solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/I148-400.stl_created_by_BoundingMesh
+solid robot
     facet normal 0 0 -1
         outer loop
             vertex 0.05105 0.00181865 0.012
@@ -42923,4 +42923,4 @@ solid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database
             vertex 0.00209053 -0.0143485 0.0096
         endloop
     endfacet
-endsolid D:/Users/Paul Maroldt/Documents/!StartUp_Repositories/module_type_database/I148-400.stl_created_by_BoundingMesh
+endsolid
