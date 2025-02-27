@@ -4,7 +4,7 @@
 /.vscode
 /messages.txt
 /.cache
-check_missing.py
 test_socket.py
 client.py
 inertia_xacro.py
+/check_missing_files.py
