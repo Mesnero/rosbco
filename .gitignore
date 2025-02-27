@@ -2,9 +2,6 @@
 /install
 /log
 /.vscode
-/messages.txt
 /.cache
-test_socket.py
-client.py
-inertia_xacro.py
-/check_missing_files.py
+
+/scripts
