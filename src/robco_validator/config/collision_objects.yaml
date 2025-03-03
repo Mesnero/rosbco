@@ -1,0 +1,30 @@
+validator_node:
+  ros__parameters:
+# Workspace boundaries (for walls).
+    workspace:
+      use_workspace: true
+      min_x: -3.0
+      max_x: 3.0
+      min_y: -3.0
+      max_y: 3.0
+      min_z: -3.0
+      max_z: 3.0
+    # Additional collision objects.
+    collision_objects:
+      names: ["box1", "box2"]
+      # Each object must have x, y, z, depth, height, and width parameters.
+      box1:
+        x: 1.0
+        y: 0.0
+        z: 0.25
+        depth: 0.5
+        height: 0.5
+        width: 0.5
+      box2:
+        x: 2.0
+        y: 1.0
+        z: 0.5
+        depth: 1.0
+        height: 0.25
+        width: 0.25
+    

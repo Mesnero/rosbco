@@ -10,6 +10,11 @@
                     <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </visual>
+            <collision>
+                <geometry>
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
+                </geometry>
+            </collision>
             <inertial>
                 <mass value="${proximal_mass}" />
                 <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
@@ -36,6 +41,11 @@
                     <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </visual>
+            <collision>
+                <geometry>
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
+                </geometry>
+            </collision>
             <inertial>
                 <mass value="${proximal_mass}" />
                 <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
@@ -64,6 +74,12 @@
                         filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
                 </geometry>
             </visual>
+            <collision>
+                <geometry>
+                    <mesh
+                        filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
+                </geometry>
+            </collision>
             <inertial>
                 <mass value="${proximal_mass}" />
                 <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
@@ -101,6 +117,11 @@
                     <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
                 </geometry>
             </visual>
+            <collision>
+                <geometry>
+                    <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
+                </geometry>
+            </collision>
             <inertial>
                 <mass value="${distal_mass}" />
                 <inertia ixx="${distal_ixx}" ixy="${distal_ixy}" ixz="${distal_ixz}"
@@ -126,6 +147,11 @@
                     <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
             </visual>
+            <collision>
+                <geometry>
+                    <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
+                </geometry>
+            </collision>
             <inertial>
                 <mass value="${proximal_mass}" />
                 <inertia ixx="${proximal_ixx}" ixy="${proximal_ixy}" ixz="${proximal_ixz}"
