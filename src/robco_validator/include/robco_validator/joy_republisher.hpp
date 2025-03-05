@@ -40,7 +40,7 @@ class JoyRepublisher : public rclcpp::Node
 {
 public:
 
-JoyRepublisher(std::string topic = "servo/delta_twist_cmds", std::string frame_id = "world")
+JoyRepublisher(std::string topic = "/servo/twist_cmd", std::string frame_id = "world")
   : Node("joy_republisher"), frame_id_{frame_id}
   {
     joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
@@ -54,6 +54,7 @@ JoyRepublisher(std::string topic = "servo/delta_twist_cmds", std::string frame_i
 private:
   void statusCallback(const sensor_msgs::msg::Joy msg)
   {
+    RCLCPP_INFO(this->get_logger(), "RECEIVED A MESSAGE!");
     auto republished_msg = std::make_unique<geometry_msgs::msg::TwistStamped>();
     republished_msg->header.stamp = this->now();
     republished_msg->header.frame_id = frame_id_;

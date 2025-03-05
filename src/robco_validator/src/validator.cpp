@@ -57,10 +57,12 @@ int main(int argc, char ** argv)
   executor->add_node(status_republisher_node);
 
   if (use_joy_republisher) {
+    RCLCPP_INFO(node->get_logger(), "USING JOY");
     auto joy_republisher_node = std::make_shared<robco_validator::JoyRepublisher>(servo_parameters->cartesian_command_in_topic, servo_parameters->planning_frame);  
     executor->add_node(joy_republisher_node);
   } 
   else {
+    RCLCPP_INFO(node->get_logger(), "USING JOG");
     auto jog_republisher_node = std::make_shared<robco_validator::JointJogRepublisher>(servo_parameters->joint_command_in_topic);
     executor->add_node(jog_republisher_node);
   }
