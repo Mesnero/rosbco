@@ -15,6 +15,12 @@ def launch_setup(context, params):
     servo_file = LaunchConfiguration('servo_config_file_path').perform(context)
     # Get the absolute path.
     absolute_servo_file = os.path.abspath(servo_file)
+    
+    joint_limits_file = LaunchConfiguration('joint_limits_file_path').perform(context)
+    absolute_joint_limits_file = os.path.abspath(joint_limits_file)
+    
+    collision_object_path = LaunchConfiguration('collision_objects_file_path').perform(context)
+    params.append(collision_object_path)
 
     # Build servo_params using the resolved absolute file path.
     servo_params = {
@@ -22,6 +28,9 @@ def launch_setup(context, params):
         .yaml(absolute_servo_file)
         .to_dict()
     }
+    
+    joint_limits = {"robot_description_planning": load_yaml(Path(absolute_joint_limits_file))}
+    params.append(joint_limits)
     
     params.append({"use_joy_republisher": LaunchConfiguration("use_joy_republisher").perform(context).lower() == "true"})
     params.append(servo_params)
@@ -52,13 +61,23 @@ def generate_launch_description():
         default_value=os.path.join(robco_validator_share, 'config', 'servo_config_cartesian_sim.yaml'),
         description='Filename for the servo config file'
     )
+    
+    collision_objects_file_path_arg = DeclareLaunchArgument(
+        'collision_objects_file_path',
+        default_value=os.path.join(robco_validator_share, 'config', 'collision_objects.yaml'),
+        description='File path for collision objects (will NOT be loaded, just passed)'
+    )
 
+    joint_limits_file_path_arg = DeclareLaunchArgument(
+        'joint_limits_file_path',
+        default_value=os.path.join(robco_validator_share, 'config', 'joint_limits.yaml'),
+        description='YAML file containing joint limits'
+    )
+        
     # Define file paths for static files.
     urdf_path = os.path.join(robco_description_share, "urdf", "robco.xacro")
-    joint_limits_path = os.path.join(robco_validator_share, "config", "joint_limits.yaml")
     srdf_path = os.path.join(robco_validator_share, "config", "robco.srdf")
     kinematics_path = os.path.join(robco_validator_share, "config", "kinematics.yaml")
-    collision_object_path = os.path.join(robco_validator_share, "config", "collision_objects.yaml")
 
     params = []
     description = {"robot_description": ParameterValue(Xacro(str(urdf_path)),value_type=str)}
@@ -69,15 +88,10 @@ def generate_launch_description():
     
     kinematics = {"robot_description_kinematics": load_yaml(Path(kinematics_path))}
     params.append(kinematics)
-    
-    joint_limits = {"robot_description_planning": load_yaml(Path(joint_limits_path))}
-    params.append(joint_limits)
 
     acceleration_filter_update_period = {"update_period": 0.01}
     params.append(acceleration_filter_update_period)
     
-    params.append(collision_object_path)
-
     # Use OpaqueFunction to resolve the launch configuration and build the node.
     opaque_function = OpaqueFunction(
         function=lambda context: launch_setup(
@@ -89,5 +103,7 @@ def generate_launch_description():
     return launch.LaunchDescription([
         use_joy_republisher_arg,
         servo_config_file_path_arg,
+        collision_objects_file_path_arg,
+        joint_limits_file_path_arg,
         opaque_function
     ])

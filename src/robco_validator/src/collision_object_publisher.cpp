@@ -37,9 +37,9 @@ void CollisionObjectPublisher::declareAndGetParameters() {
       node_->declare_parameter<double>(prefix + ".x", 0.0);
       node_->declare_parameter<double>(prefix + ".y", 0.0);
       node_->declare_parameter<double>(prefix + ".z", 0.0);
-      node_->declare_parameter<double>(prefix + ".depth", 0.0);
-      node_->declare_parameter<double>(prefix + ".height", 0.0);
-      node_->declare_parameter<double>(prefix + ".width", 0.0);
+      node_->declare_parameter<double>(prefix + ".depth", 1.0);
+      node_->declare_parameter<double>(prefix + ".height", 1.0);
+      node_->declare_parameter<double>(prefix + ".width", 1.0);
       node_->get_parameter(prefix + ".x", obj.x);
       node_->get_parameter(prefix + ".y", obj.y);
       node_->get_parameter(prefix + ".z", obj.z);
@@ -177,7 +177,7 @@ visualization_msgs::msg::Marker CollisionObjectPublisher::create_collision_objec
     marker.type = visualization_msgs::msg::Marker::CUBE;
     marker.action = visualization_msgs::msg::Marker::ADD;
     marker.scale.x = col_obj.width;
-    marker.scale.y = col_obj.height; //TODO: Test if scale makes sense
+    marker.scale.y = col_obj.height; 
     marker.scale.z = col_obj.depth;
     marker.color.r = 1.0;  // red color
     marker.color.g = 0.0;
@@ -209,16 +209,21 @@ void CollisionObjectPublisher::publish_collision_objects() {
 }
 
 void CollisionObjectPublisher::publish_markers() {
-    if (use_workspace_)
-    {
-        auto marker = create_workspace_marker();
-        marker_pub_->publish(marker);
-    }
+    // Publish it 10 times in case rviz hasn't started yet.
+    for (int i = 0; i < 10; ++i) {
+        if (use_workspace_)
+        {
+            auto marker = create_workspace_marker();
+                marker_pub_->publish(marker);
+            
+        }
 
-    for (auto & obj : collision_objs_)
-    {
-        auto col_marker = create_collision_object_marker(obj);
-        marker_pub_->publish(col_marker);
+        for (auto & obj : collision_objs_)
+        {
+            auto col_marker = create_collision_object_marker(obj);
+            marker_pub_->publish(col_marker);
+        }
+        rclcpp::sleep_for(std::chrono::seconds(1));
     }
 }
 

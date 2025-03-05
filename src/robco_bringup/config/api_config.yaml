@@ -1,0 +1,25 @@
+ros2_api:
+  ros__parameters:
+    states_topic: "/joint_states" # Where to read this topic. Optional. Default: ... (Message is always all five arrays)
+    joint_names: #Required if JointTrajectoryController is active
+      - "drive1_joint"
+      - "drive2_joint"
+      - "drive3_joint"
+      - "drive4_joint"
+      - "drive5_joint"
+      - "drive6_joint"
+    base_frame: "world" #Required if JointTrajectoryController is active, defaults to map
+    publishers: # At least one required! 
+      - publisher: "JointGroupVelocityController"
+        name: "velocity"  
+        topic: "/vel_cmds"   
+      - publisher: "JoyMessage"
+        name: "joypad"
+        topic: "/gamepad_cmds"
+    transport:
+      type: "protocols::TCPSocket" # Name of the plugin as set in the pluginlib.xml
+      params: # Your own params for the plugin specified. Not checked by parser. Passed to the plugin. Optional.
+        ip_address: "127.0.0.1"
+        port: 12345
+        queue_size: 1
+        max_message_size: 4096
