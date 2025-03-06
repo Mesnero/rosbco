@@ -17,9 +17,6 @@ ros2_api:
         name: "joypad"
         topic: "/gamepad_cmds"
     transport:
-      type: "protocols::TCPSocket" # Name of the plugin as set in the pluginlib.xml
+      type: "protocols::ZeroMQ" # Name of the plugin as set in the pluginlib.xml
       params: # Your own params for the plugin specified. Not checked by parser. Passed to the plugin. Optional.
-        ip_address: "127.0.0.1"
-        port: 12345
-        queue_size: 1
-        max_message_size: 4096
+        endpoint: "tcp://127.0.0.1:5555"
