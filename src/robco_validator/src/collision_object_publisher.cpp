@@ -210,21 +210,17 @@ void CollisionObjectPublisher::publish_collision_objects() {
 
 void CollisionObjectPublisher::publish_markers() {
     // Publish it 10 times in case rviz hasn't started yet.
-    for (int i = 0; i < 10; ++i) {
-        if (use_workspace_)
-        {
-            auto marker = create_workspace_marker();
-                marker_pub_->publish(marker);
-            
-        }
-
-        for (auto & obj : collision_objs_)
-        {
-            auto col_marker = create_collision_object_marker(obj);
-            marker_pub_->publish(col_marker);
-        }
-        rclcpp::sleep_for(std::chrono::seconds(1));
+    if (use_workspace_)
+    {
+        auto marker = create_workspace_marker();
+        marker_pub_->publish(marker);    
     }
+    for (auto & obj : collision_objs_)
+    {
+        auto col_marker = create_collision_object_marker(obj);
+        marker_pub_->publish(col_marker);
+    }
+    
 }
 
 } // namespace robco_validator

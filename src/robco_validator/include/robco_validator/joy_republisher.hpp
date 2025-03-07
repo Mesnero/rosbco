@@ -54,7 +54,6 @@ JoyRepublisher(std::string topic = "/servo/twist_cmd", std::string frame_id = "w
 private:
   void statusCallback(const sensor_msgs::msg::Joy msg)
   {
-    RCLCPP_INFO(this->get_logger(), "RECEIVED A MESSAGE!");
     auto republished_msg = std::make_unique<geometry_msgs::msg::TwistStamped>();
     republished_msg->header.stamp = this->now();
     republished_msg->header.frame_id = frame_id_;
