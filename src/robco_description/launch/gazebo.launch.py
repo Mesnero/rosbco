@@ -9,11 +9,17 @@ from launch.event_handlers import OnProcessExit
 
 def generate_launch_description():
 
+    # Path to the world file
+    world_file = PathJoinSubstitution(
+        [FindPackageShare("robco_description"), "worlds", "my_world.sdf"]
+    )
+
     # gazebo
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [FindPackageShare("gazebo_ros"), "/launch/gazebo.launch.py"]
-        )
+        ),
+        launch_arguments={'world': world_file, "verbose": "true"}.items()
     )
 
     gz_spawn_entity = Node(

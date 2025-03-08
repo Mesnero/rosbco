@@ -15,7 +15,7 @@ ros2_api:
         topic: "/vel_cmds"   
       - publisher: "JoyMessage"
         name: "joypad"
-        topic: "/gamepad_cmds"
+        topic: "/joy"
     transport:
       type: "protocols::ZeroMQ" # Name of the plugin as set in the pluginlib.xml
       params: # Your own params for the plugin specified. Not checked by parser. Passed to the plugin. Optional.

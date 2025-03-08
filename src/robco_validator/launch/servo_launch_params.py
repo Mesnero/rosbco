@@ -32,7 +32,6 @@ def launch_setup(context, params):
     joint_limits = {"robot_description_planning": load_yaml(Path(absolute_joint_limits_file))}
     params.append(joint_limits)
     
-    params.append({"use_joy_republisher": LaunchConfiguration("use_joy_republisher").perform(context).lower() == "true"})
     params.append(servo_params)
 
     # Create the node with the parameters.
@@ -48,13 +47,6 @@ def generate_launch_description():
     # Get package directories.
     robco_description_share = get_package_share_directory("robco_description")
     robco_validator_share = get_package_share_directory("robco_validator")
-
-    # Declare launch arguments.
-    use_joy_republisher_arg = DeclareLaunchArgument(
-        'use_joy_republisher',
-        default_value='false',
-        description='Set to "true" to use JoyRepublisher; otherwise JointJogRepublisher will be used.'
-    )
 
     servo_config_file_path_arg = DeclareLaunchArgument(
         'servo_config_file_path',
@@ -101,7 +93,6 @@ def generate_launch_description():
     )
 
     return launch.LaunchDescription([
-        use_joy_republisher_arg,
         servo_config_file_path_arg,
         collision_objects_file_path_arg,
         joint_limits_file_path_arg,

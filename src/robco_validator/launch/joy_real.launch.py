@@ -34,7 +34,6 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(servo_launch_path),
             # Override the launch arguments here.
             launch_arguments={
-                'use_joy_republisher': 'true',
                 'servo_config_file_path': servo_config_file_path,
                 'collision_objects_file_path': collision_objects,
                 'joint_limits_file_path': joint_limits
