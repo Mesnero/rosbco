@@ -10,7 +10,7 @@ def generate_launch_description():
     # Get the share directory where your servo_launch.py is located.
     package_share = get_package_share_directory('robco_validator')
     servo_launch_path = os.path.join(package_share, 'launch', 'servo_launch_params.py')
-    servo_config_file_path = os.path.join(package_share, 'config', 'servo_config_joing_real.yaml')
+    servo_config_file_path = os.path.join(package_share, 'config', 'servo_config_joint_real.yaml')
 
     # Declare launch arguments
     joint_limits_param = DeclareLaunchArgument(

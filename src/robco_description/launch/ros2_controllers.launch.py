@@ -1,7 +1,7 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument, TimerAction
+from launch.substitutions import LaunchConfiguration, Command
 from launch.conditions import UnlessCondition
 from launch.substitutions import PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
@@ -36,12 +36,17 @@ def generate_launch_description():
         ]
     )    
     
+    robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
+    
     control_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        parameters=[robot_controllers],
+        parameters=[{'robot_description': robot_description}, robot_controllers],
         output="both",
         condition=UnlessCondition(use_sim)
     )
     
-    return LaunchDescription([use_sim_arg, joint_state_broadcaster_spawner, robot_controller_spawner, control_node])
+    delayed_controller_manager = TimerAction(period=3.0,actions=[control_node])
+
+    
+    return LaunchDescription([use_sim_arg, joint_state_broadcaster_spawner, robot_controller_spawner, delayed_controller_manager])

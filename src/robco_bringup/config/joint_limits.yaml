@@ -13,40 +13,40 @@ joint_limits:
     max_velocity: 4.25
     has_acceleration_limits: false
     max_acceleration: 0
-    max_position: 3.14   
-    min_position: -3.14
+    max_position: 5.0   
+    min_position: -5.0
   drive2_joint:
     has_velocity_limits: true
     max_velocity: 4.25
     has_acceleration_limits: false
     max_acceleration: 0
-    max_position: 2.5    
-    min_position: -2.5
+    max_position: 5.0
+    min_position: -5.0
   drive3_joint:
     has_velocity_limits: true
     max_velocity: 4.25
     has_acceleration_limits: false
     max_acceleration: 0
-    max_position: 3.14
-    min_position: -3.14
+    max_position: 5.0
+    min_position: -5.0
   drive4_joint:
     has_velocity_limits: true
     max_velocity: 4.25
     has_acceleration_limits: false
     max_acceleration: 0
-    max_position: 2.5
-    min_position: -2.5
+    max_position: 5.0
+    min_position: -5.0
   drive5_joint:
     has_velocity_limits: true
     max_velocity: 4.25
     has_acceleration_limits: false
     max_acceleration: 0
-    max_position: 3.14
-    min_position: -3.14
+    max_position: 5.0
+    min_position: -5.0
   drive6_joint:
     has_velocity_limits: true
     max_velocity: 4.25
     has_acceleration_limits: false
     max_acceleration: 0
-    max_position: 3.14
-    min_position: -3.14
+    max_position: 5.0
+    min_position: -5.0

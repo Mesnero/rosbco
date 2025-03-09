@@ -39,18 +39,15 @@ int main(int argc, char ** argv)
     return EXIT_FAILURE;
   }
 
-  robco_validator::CollisionObjectPublisher cop(node, servo_parameters->planning_frame);
-  cop.publish_collision_objects();
-  cop.publish_markers();
+  //robco_validator::CollisionObjectPublisher cop(node, servo_parameters->planning_frame);
+  //cop.publish_collision_objects();
+  //cop.publish_markers();
 
   // Start servo
   auto servo = std::make_unique<moveit_servo::Servo>(node, servo_parameters, planning_scene_monitor);
   servo->start();
 
   auto status_republisher_node = std::make_shared<robco_validator::ServoStatusRepublisher>(servo_parameters->status_topic);
-
-  node->declare_parameter<bool>("use_joy_republisher", false);
-  bool use_joy_republisher = node->get_parameter("use_joy_republisher").as_bool();
 
   auto executor = std::make_unique<rclcpp::executors::MultiThreadedExecutor>();
   executor->add_node(node);

@@ -40,11 +40,11 @@ class JoyRepublisher : public rclcpp::Node
 {
 public:
 
-JoyRepublisher(std::string topic = "/servo/twist_cmd", std::string frame_id = "world")
+JoyRepublisher(std::string topic = "servo/delta_twist_cmds", std::string frame_id = "world")
   : Node("joy_republisher"), frame_id_{frame_id}
   {
     joy_sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
-        "/joy", //TODO: CHANGE AGAIN
+        "/gamepad_cmds",
         10,
         std::bind(&JoyRepublisher::statusCallback, this, std::placeholders::_1));
 
@@ -78,30 +78,9 @@ private:
     twist_pub_->publish(std::move(republished_msg));
   }
 
-  void voidStatusCallbackJoy(const sensor_msgs::msg::Joy msg) {
-    auto twist = std::make_unique<geometry_msgs::msg::TwistStamped>();
-    twist->header.stamp = this->now();
-    twist->header.frame_id = frame_id_;
-    twist->twist.linear.z = msg.axes[RIGHT_STICK_Y];
-    twist->twist.linear.y = msg.axes[RIGHT_STICK_X];
-  
-    double lin_x_right = -0.5 * (msg.axes[RIGHT_TRIGGER] - AXIS_DEFAULTS.at(RIGHT_TRIGGER));
-    double lin_x_left = 0.5 * (msg.axes[LEFT_TRIGGER] - AXIS_DEFAULTS.at(LEFT_TRIGGER));
-    twist->twist.linear.x = lin_x_right + lin_x_left;
-  
-    twist->twist.angular.y = msg.axes[LEFT_STICK_Y];
-    twist->twist.angular.x = msg.axes[LEFT_STICK_X];
-  
-    double roll_positive = msg.buttons[RIGHT_BUMPER];
-    double roll_negative = -1 * (msg.buttons[LEFT_BUMPER]);
-    twist->twist.angular.z = roll_positive + roll_negative;
-    twist_pub->publish(std::move(twist));
-  }
-  
-
   double adjust_for_deadzone(double axisValue) {
     auto deadzone = 0.1;
-    if (abs(axisValue) < deadzone) {
+    if (axisValue < deadzone) {
       return 0.0;
     }
     return axisValue;
