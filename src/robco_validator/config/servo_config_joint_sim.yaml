@@ -1,4 +1,4 @@
-use_gazebo: false # Whether the robot is started in a Gazebo simulation environment.
+use_gazebo: true # Whether the robot is started in a Gazebo simulation environment.
 
 # Stopping & Halt Behavior
 incoming_command_timeout: 0.1 # Timeout duration (in seconds) after which servoing stops if no new command is received.
@@ -23,7 +23,7 @@ move_group_name: robco_arm # Name of the MoveIt move group (commonly "manipulato
 planning_frame: world # The MoveIt planning frame (e.g., "base_link" or "world").
 ee_frame_name: effector # Name of the end-effector link used to return its pose.
 is_primary_planning_scene_monitor: true # Flag indicating whether this is the primary planning scene monitor.
-monitored_planning_scene_topic: /moveit_servo/publish_planning_scene # Topic for the monitored planning scene.
+monitored_planning_scene_topic: /servo_node/publish_planning_scene # Topic for the monitored planning scene.
 
 # Outgoing Command Configuration
 publish_period: 0.01 # Nominal publish period (inverse of the publish rate in seconds).

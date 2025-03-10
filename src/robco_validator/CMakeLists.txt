@@ -17,6 +17,7 @@ find_package(tf2_ros REQUIRED)
 find_package(ros2_api_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 
 include_directories(
   include
@@ -40,6 +41,7 @@ ament_target_dependencies(validator
   ros2_api_msgs
   sensor_msgs
   visualization_msgs
+  std_srvs
 )
 
 install(TARGETS validator

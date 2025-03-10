@@ -19,7 +19,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             [FindPackageShare("gazebo_ros"), "/launch/gazebo.launch.py"]
         ),
-        launch_arguments={'world': world_file, "verbose": "true"}.items()
+        launch_arguments={'world': world_file}.items()
     )
 
     gz_spawn_entity = Node(
