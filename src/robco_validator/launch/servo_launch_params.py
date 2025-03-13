@@ -4,16 +4,13 @@ import launch_ros.actions
 from ament_index_python.packages import get_package_share_directory
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch.substitutions import LaunchConfiguration
-from launch_param_builder import ParameterBuilder, load_yaml
+from launch_param_builder import ParameterBuilder, load_yaml, load_xacro
 from launch_ros.parameter_descriptions import ParameterValue
 from moveit_configs_utils.substitutions import Xacro
 from pathlib import Path
 
 
-def launch_setup(context, params_servo):
-    
-    params_validator = []
-    
+def launch_setup(context, params):
     # Resolve the servo_config_file_path from the launch context.
     servo_file = LaunchConfiguration('servo_config_file_path').perform(context)
     # Get the absolute path.
@@ -23,7 +20,7 @@ def launch_setup(context, params_servo):
     absolute_joint_limits_file = os.path.abspath(joint_limits_file)
     
     collision_object_path = LaunchConfiguration('collision_objects_file_path').perform(context)
-    params_validator.append(collision_object_path)
+    params.append(collision_object_path)
 
     # Build servo_params using the resolved absolute file path.
     servo_params = {
@@ -31,29 +28,20 @@ def launch_setup(context, params_servo):
         .yaml(absolute_servo_file)
         .to_dict()
     }
-    params_servo.append(servo_params)
-    params_validator.append(servo_params)
     
     joint_limits = {"robot_description_planning": load_yaml(Path(absolute_joint_limits_file))}
-    params_servo.append(joint_limits)
+    params.append(joint_limits)
     
+    params.append(servo_params)
 
     # Create the node with the parameters.
-    validator_node = launch_ros.actions.Node(
+    servo_node = launch_ros.actions.Node(
         package="robco_validator",
         executable="validator",
-        parameters=params_validator,
+        parameters=params,
         output="screen",
     )
-    
-    servo_node = launch_ros.actions.Node(
-        package="moveit_servo",
-        executable="servo_node_main",
-        parameters=params_servo,
-        output="screen",
-    )
-    
-    return [servo_node, validator_node]
+    return [servo_node]
 
 def generate_launch_description():
     # Get package directories.
@@ -92,6 +80,9 @@ def generate_launch_description():
     
     kinematics = {"robot_description_kinematics": load_yaml(Path(kinematics_path))}
     params_servo.append(kinematics)
+
+    acceleration_filter_update_period = {"update_period": 0.01}
+    params_servo.append(acceleration_filter_update_period)
     
     # Use OpaqueFunction to resolve the launch configuration and build the node.
     opaque_function = OpaqueFunction(

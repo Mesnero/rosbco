@@ -13,13 +13,17 @@ def generate_launch_description():
     world_file = PathJoinSubstitution(
         [FindPackageShare("robco_description"), "worlds", "my_world.sdf"]
     )
+    
+    params = PathJoinSubstitution(
+        [FindPackageShare("robco_description"), "gazebo", "gazebo_params.yaml"]
+    )
 
     # gazebo
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [FindPackageShare("gazebo_ros"), "/launch/gazebo.launch.py"]
         ),
-        launch_arguments={'world': world_file}.items()
+        launch_arguments={'world': world_file, 'params_file': params}.items()
     )
 
     gz_spawn_entity = Node(

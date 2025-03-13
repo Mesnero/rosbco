@@ -129,12 +129,17 @@ def generate_launch_description():
         joint_limits_path_arg,
         api_config_path_arg,
         TimerAction(
-            period=5.0,
+            period=8.0,
             actions=[                
                 joint_real,
                 joint_sim,
                 joy_real,
-                joy_sim,
+                joy_sim
+            ]
+        ),
+        TimerAction(
+            period=4.0,
+            actions=[                
                 node_rviz
             ]
         ),

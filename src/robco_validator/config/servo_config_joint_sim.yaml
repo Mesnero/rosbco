@@ -9,14 +9,14 @@ halt_all_joints_in_cartesian_mode: true # Whether to halt all joints when operat
 # Singularity & Joint Limits
 lower_singularity_threshold: 30.0  # Start decelerating when the condition number hits this (close to singularity)
 hard_stop_singularity_threshold: 50.0  # Stop when the condition number hits this
-joint_limit_margin: 0.1 # A buffer (in radians) added to the joint limits to provide a safety margin.
+joint_limit_margin: 0.05 # A buffer (in radians) added to the joint limits to provide a safety margin.
 leaving_singularity_threshold_multiplier: 2.0  # Multiply the hard stop limit by this when leaving singularity
 
 # Collision Checking Settings
 check_collisions: true  # Check collisions?
-collision_check_rate: 10.0  # [Hz] Collision-checking can easily bog down a CPU if done too often.
-self_collision_proximity_threshold: 0.01  # Start decelerating when a self-collision is this far [m]
-scene_collision_proximity_threshold: 0.02  # Start decelerating when a scene collision is this far [m]
+collision_check_rate: 30.0  # [Hz] Collision-checking can easily bog down a CPU if done too often.
+self_collision_proximity_threshold: 0.05  # Start decelerating when a self-collision is this far [m]
+scene_collision_proximity_threshold: 0.05  # Start decelerating when a scene collision is this far [m]
 
 # MoveIt and Planning Scene Settings
 move_group_name: robco_arm # Name of the MoveIt move group (commonly "manipulator" or "arm").

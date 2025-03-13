@@ -2,30 +2,22 @@
 
 <robot name="robco" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:include filename="$(find robco_description)/urdf/robco_modules.xacro"/>
-    <link name="world" />
+    <link name="world"/>            <!-- Virtual link to fix the robot to the ground-->
 
     <joint name="world__base" type="fixed">
-                <origin rpy="0 0 0" xyz="0 0 0.132"/>
-                <parent link="world"/>
-                <child link="base"/>
+        <origin rpy="0 0 0" xyz="0 0 0.132"/>
+        <parent link="world"/>
+        <child link="base"/>
     </joint>
 
-
-    <xacro:robco_module_0106 name="base" next="drive1"/>
-    <xacro:robco_module_0088 name="drive1" next="drive2"/>
-    <xacro:robco_module_0089 name="drive2" next="link0"/>
-    <xacro:robco_module_0078 name="link0" next="drive3"/>
-    <xacro:robco_module_0085 name="drive3" next="drive4"/>
-    <xacro:robco_module_0085 name="drive4" next="link1"/>
-    <xacro:robco_module_0007 name="link1" next="drive5"/>
-    <xacro:robco_module_0085 name="drive5" next="drive6"/>
-    <xacro:robco_module_0085 name="drive6" next="effector"/> 
-    <xacro:robco_module_0801 name="effector"/>
-
-    
-    <!-- <xacro:include filename="$(find robco_description)/urdf/handeye.xacro"/>
-    <xacro:handeye ns="robco" rpy="0 0 0" connected_to="" safety_distance="0.00"/>
-    
-    <xacro:include filename="$(find robco_description)/urdf/rg2.xacro"/>
-    <xacro:hand ns="robco" xyz="0 0 0" connected_to="robco_handeye_flange" safety_distance="0.0"/>  -->
+    <xacro:robco_module_0106 name="base" next="drive1"/>       <!-- Base module -->
+    <xacro:robco_module_0088 name="drive1" next="drive2"/>     <!-- Drive module -->
+    <xacro:robco_module_0089 name="drive2" next="link0"/>      <!-- Drive module -->
+    <xacro:robco_module_0078 name="link0" next="drive3"/>      <!-- Link module -->
+    <xacro:robco_module_0085 name="drive3" next="drive4"/>     <!-- Drive module -->
+    <xacro:robco_module_0085 name="drive4" next="link1"/>      <!-- Drive module -->
+    <xacro:robco_module_0007 name="link1" next="drive5"/>      <!-- Link module -->
+    <xacro:robco_module_0085 name="drive5" next="drive6"/>     <!-- Drive module -->
+    <xacro:robco_module_0085 name="drive6" next="effector"/>   <!-- Drive module -->
+    <xacro:robco_module_0801 name="effector"/>                 <!-- Effector module -->
 </robot>

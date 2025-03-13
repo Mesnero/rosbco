@@ -1,11 +1,11 @@
 #include <rclcpp/rclcpp.hpp>
 #include <moveit_servo/servo_parameters.h>
+#include <moveit_servo/servo.h>
 #include <moveit/planning_scene_monitor/planning_scene_monitor.h>
 #include <robco_validator/collision_object_publisher.hpp>
 #include <robco_validator/joy_republisher.hpp>
 #include <robco_validator/servo_status_republisher.hpp>
 #include <robco_validator/joint_jog_republisher.hpp>
-#include <std_srvs/srv/trigger.hpp>
 
 int main(int argc, char ** argv)
 {
@@ -31,15 +31,29 @@ int main(int argc, char ** argv)
   jog_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
 
 
-  //TODO: MAKE THIS WORK!
+  planning_scene_monitor::PlanningSceneMonitorPtr planning_scene_monitor;
+  planning_scene_monitor = std::make_shared<planning_scene_monitor::PlanningSceneMonitor>(node, "robot_description");
+  if (planning_scene_monitor->getPlanningScene())
+  {
+    planning_scene_monitor->providePlanningSceneService();
+    planning_scene_monitor->startSceneMonitor();
+    planning_scene_monitor->startWorldGeometryMonitor(
+        planning_scene_monitor::PlanningSceneMonitor::DEFAULT_COLLISION_OBJECT_TOPIC,
+        planning_scene_monitor::PlanningSceneMonitor::DEFAULT_PLANNING_SCENE_WORLD_TOPIC,
+        false /* skip octomap monitor */);
+    planning_scene_monitor->startStateMonitor(servo_parameters->joint_topic);
+    planning_scene_monitor->startPublishingPlanningScene(planning_scene_monitor::PlanningSceneMonitor::UPDATE_SCENE);
+  }
+
+  auto servo = std::make_unique<moveit_servo::Servo>(node, servo_parameters, planning_scene_monitor);
+  servo->start();
+
+
   robco_validator::CollisionObjectPublisher cop(node, servo_parameters->planning_frame);
   cop.publish_collision_objects();
   cop.publish_markers();
 
-  // Start servo
-  auto servo_start_client = node->create_client<std_srvs::srv::Trigger>("/servo_node/start_servo");
-  servo_start_client->wait_for_service(std::chrono::seconds(1));
-  servo_start_client->async_send_request(std::make_shared<std_srvs::srv::Trigger::Request>());
+
   
   auto executor = std::make_unique<rclcpp::executors::MultiThreadedExecutor>();
   executor->add_node(node);
