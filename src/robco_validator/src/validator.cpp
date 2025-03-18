@@ -21,16 +21,8 @@ int main(int argc, char ** argv)
     RCLCPP_FATAL(node->get_logger(), "Failed to load the servo parameters");
     return EXIT_FAILURE;
   }
-
-  auto status_republisher_node = std::make_shared<robco_validator::ServoStatusRepublisher>(servo_parameters->status_topic);
-  auto joy_republisher_node = std::make_shared<robco_validator::JoyRepublisher>(servo_parameters->cartesian_command_in_topic, servo_parameters->planning_frame);  
-  auto jog_republisher_node = std::make_shared<robco_validator::JointJogRepublisher>(servo_parameters->joint_command_in_topic);
   node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
-  status_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
-  joy_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
-  jog_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
-
-
+  
   planning_scene_monitor::PlanningSceneMonitorPtr planning_scene_monitor;
   planning_scene_monitor = std::make_shared<planning_scene_monitor::PlanningSceneMonitor>(node, "robot_description");
   if (planning_scene_monitor->getPlanningScene())
@@ -44,6 +36,13 @@ int main(int argc, char ** argv)
     planning_scene_monitor->startStateMonitor(servo_parameters->joint_topic);
     planning_scene_monitor->startPublishingPlanningScene(planning_scene_monitor::PlanningSceneMonitor::UPDATE_SCENE);
   }
+
+  auto jog_republisher_node = std::make_shared<robco_validator::JointJogRepublisher>(servo_parameters->joint_command_in_topic, node);
+  auto joy_republisher_node = std::make_shared<robco_validator::JoyRepublisher>(servo_parameters->cartesian_command_in_topic, servo_parameters->planning_frame);  
+  auto status_republisher_node = std::make_shared<robco_validator::ServoStatusRepublisher>(servo_parameters->status_topic);
+  status_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
+  joy_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
+  jog_republisher_node->set_parameter(rclcpp::Parameter("use_sim_time", servo_parameters->use_gazebo));
 
   auto servo = std::make_unique<moveit_servo::Servo>(node, servo_parameters, planning_scene_monitor);
   servo->start();

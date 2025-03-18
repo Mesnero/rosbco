@@ -14,7 +14,7 @@ leaving_singularity_threshold_multiplier: 2.0  # Multiply the hard stop limit by
 
 # Collision Checking Settings
 check_collisions: true  # Check collisions?
-collision_check_rate: 30.0  # [Hz] Collision-checking can easily bog down a CPU if done too often.
+collision_check_rate: 40.0  # [Hz] Collision-checking can easily bog down a CPU if done too often.
 self_collision_proximity_threshold: 0.05  # Start decelerating when a self-collision is this far [m]
 scene_collision_proximity_threshold: 0.05  # Start decelerating when a scene collision is this far [m]
 

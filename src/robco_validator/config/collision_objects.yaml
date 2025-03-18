@@ -12,7 +12,6 @@ validator_node:
     # Additional collision objects.
     collision_objects:
       names: ["box1", "box2"]
-      # Each object must have x, y, z, depth, height, and width parameters.
       box1:
         x: 1.0
         y: 0.0

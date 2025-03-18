@@ -1,20 +1,11 @@
-use_gazebo: true # Whether the robot is started in a Gazebo simulation environment.
-
 # Stopping & Halt Behavior
-incoming_command_timeout: 0.1 # Timeout duration (in seconds) after which servoing stops if no new command is received.
+incoming_command_timeout: 1.0 # Timeout duration (in seconds) after which servoing stops if no new command is received.
 num_outgoing_halt_msgs_to_publish: 4 # Number of halt messages to publish when stopping the robot.
 halt_all_joints_in_joint_mode: true # Whether to halt all joints when operating in joint mode.
-halt_all_joints_in_cartesian_mode: true # Whether to halt all joints when operating in Cartesian mode.
-
-# Singularity & Joint Limits
-lower_singularity_threshold: 30.0  # Start decelerating when the condition number hits this (close to singularity)
-hard_stop_singularity_threshold: 50.0  # Stop when the condition number hits this
-joint_limit_margin: 0.05 # A buffer (in radians) added to the joint limits to provide a safety margin.
-leaving_singularity_threshold_multiplier: 2.0  # Multiply the hard stop limit by this when leaving singularity
 
 # Collision Checking Settings
 check_collisions: true  # Check collisions?
-collision_check_rate: 30.0  # [Hz] Collision-checking can easily bog down a CPU if done too often.
+collision_check_rate: 40.0  # [Hz] Collision-checking can easily bog down a CPU if done too often.
 self_collision_proximity_threshold: 0.05  # Start decelerating when a self-collision is this far [m]
 scene_collision_proximity_threshold: 0.05  # Start decelerating when a scene collision is this far [m]
 
@@ -33,12 +24,11 @@ publish_joint_accelerations: false # Whether joint accelerations are published i
 command_out_type: std_msgs/Float64MultiArray # "trajectory_msgs/JointTrajectory" or "std_msgs/Float64MultiArray"
 command_out_topic: /joint_group_velocity_controller/commands  # Publish outgoing commands here
 status_topic: /servo/status  # The topic where status messages are published.
-low_latency_mode: false # Flag to enable low latency mode.
+low_latency_mode: true # Flag to enable low latency mode.
 
 # Incoming Command Configuration
 joint_topic: /joint_states  # Get joint states from this tpoic
 command_in_type: "speed_units" # "unitless" for normalized values or "speed_units" for m/s and rad/s
-cartesian_command_in_topic: /servo/twist_cmd # Topic for incoming Cartesian twist commands.
 joint_command_in_topic: /servo/joint_jog  # Topic for incoming joint angle commands
 robot_link_command_frame: world # The reference frame for commands
 

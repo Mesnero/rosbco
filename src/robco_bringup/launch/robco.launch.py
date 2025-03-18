@@ -78,7 +78,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             [FindPackageShare("core"), "/launch/server_launch.py"]
         ),
-        launch_arguments={"config_file": api_config_path}.items()
+        launch_arguments={"config_file": api_config_path, "use_sim_time": use_sim}.items()
     )
     
     gazebo = IncludeLaunchDescription(

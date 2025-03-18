@@ -23,13 +23,19 @@ public:
         std::bind(&ServoStatusRepublisher::statusCallback, this, std::placeholders::_1));
 
     feedback_pub_ =
-        this->create_publisher<ros2_api_msgs::msg::ClientFeedback>("client_feedback", 10);
+        this->create_publisher<ros2_api_msgs::msg::ClientFeedback>("feedback_channel", 10);
   }
 
 private:
   void statusCallback(const std_msgs::msg::Int8::SharedPtr msg)
   {
     ros2_api_msgs::msg::ClientFeedback republished_msg;
+    
+    // Do not pass on NO_WARNING status codes
+    if(msg == 0)
+    {
+      return;
+    }
 
     auto it = moveit_servo::SERVO_STATUS_CODE_MAP.find(
         static_cast<moveit_servo::StatusCode>(msg->data));

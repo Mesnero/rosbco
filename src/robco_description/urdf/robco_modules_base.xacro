@@ -3,7 +3,7 @@
     <!-- Gets resolved to the path to the robco_descrptions package -->
     <xacro:property name="description_package" value="$(find robco_description)" />
 
-    <!-- Base module -->
+    <!-- Define materials -->
     <xacro:macro name="robco_base_module"
         params="name mesh_filename tf_rpy tf_xyz proximal_mass 
                 proximal_ixx proximal_ixy proximal_ixz proximal_iyy 
@@ -13,6 +13,9 @@
                 <geometry>
                     <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
+                <material name="White">
+                  <color rgba="1.0 1.0 1.0 1.0"/>
+                </material>
             </visual>
             <collision>
                 <geometry>
@@ -47,6 +50,9 @@
                 <geometry>
                     <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
+                <material name="White">
+                  <color rgba="1.0 1.0 1.0 1.0"/>
+                </material>
             </visual>
             
             <collision>
@@ -90,6 +96,9 @@
                     <mesh
                         filename="file://${description_package}/meshes/${proximal_mesh_filename}" />
                 </geometry>
+                <material name="White">
+                  <color rgba="1.0 1.0 1.0 1.0"/>
+                </material>
             </visual>
             
             <collision>
@@ -137,6 +146,9 @@
                 <geometry>
                     <mesh filename="file://${description_package}/meshes/${distal_mesh_filename}" />
                 </geometry>
+                <material name="White">
+                  <color rgba="1.0 1.0 1.0 1.0"/>
+                </material>
             </visual>
             
             <collision>
@@ -174,6 +186,9 @@
                 <geometry>
                     <mesh filename="file://${description_package}/meshes/${mesh_filename}" />
                 </geometry>
+                <material name="White">
+                  <color rgba="1.0 1.0 1.0 1.0"/>
+                </material>
             </visual>
             
             <collision>
