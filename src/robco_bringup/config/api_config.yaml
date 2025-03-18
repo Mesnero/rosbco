@@ -8,4 +8,5 @@ ros2_api:
     transport:
       type: "protocols::UnixDomainSocket"
       params:
-        socket_path: "/tmp/test.socket"
+        socket_path_recv: "/tmp/test_sdk.socket"
+        socket_path_send: "/tmp/test_ros2.socket"
