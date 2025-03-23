@@ -33,7 +33,7 @@ publish_joint_accelerations: false # Whether joint accelerations are published i
 command_out_type: std_msgs/Float64MultiArray # "trajectory_msgs/JointTrajectory" or "std_msgs/Float64MultiArray"
 command_out_topic: /joint_group_velocity_controller/commands  # Publish outgoing commands here
 status_topic: /servo/status  # The topic where status messages are published.
-low_latency_mode: false # Flag to enable low latency mode.
+low_latency_mode: true # Flag to enable low latency mode.
 
 # Incoming Command Configuration
 joint_topic: /joint_states  # Get joint states from this tpoic
