@@ -61,7 +61,7 @@ private:
     republished_msg->header.stamp = this->now();
     republished_msg->joint_names = joint_names_;
 
-    if (collision_scale_ < 0.01)
+    if (collision_scale_ < 0.02)
     {
       republished_msg->velocities.assign(msg->data.size(), 0.0);
       ros2_api_msgs::msg::ClientFeedback feedback_msg;
